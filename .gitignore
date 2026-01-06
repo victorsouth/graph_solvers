@@ -1,0 +1,25 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/msvc_msbuild/.vs
+/.vs/
+/bin
+/build
+*.~vsdx
+/testing/research_oilnet_out/QSMFlowsDensity.Density_CondensatePipe/output
+/testing/research_oilnet_out/QSMFlowsDensity.Density_CondensatePipe/output_no_ident
+/msvc_cmake
+out
+.vs
+/testing/tools/__pycache__/*
+/build-debug
+.cache
+compile_commands.json
+/netadapter/bin
+/netadapter/build
+/netadapter/GraphSolversNet/bin
+/netadapter/GraphSolversNet/obj
+/netadapter/Tests/bin
+/netadapter/Tests/obj
