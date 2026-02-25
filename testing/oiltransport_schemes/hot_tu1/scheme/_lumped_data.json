@@ -1,0 +1,131 @@
+{
+    "RP1_V1": {
+    },
+    "NPS1": {
+    },
+    "LU1.2A_V1": {
+    },
+    "LU1.2A_V2": {
+    },
+    "LU1.2B_V1": {
+        "is_initially_opened": false
+    },
+    "LU1.2B_V2": {
+        "is_initially_opened": false
+    },
+    "LU1.2B_V3": {
+        "is_initially_opened": false
+    },
+    "LU1.2B_V4": {
+        "is_initially_opened": false
+    },
+    "LU1.2B_V5": {
+        "is_initially_opened": false
+    },
+    "LU1.2B_V6": {
+        "is_initially_opened": false
+    },
+    "LU1.4A_V1": {
+    },
+    "LU1.4A_V2": {
+    },
+    "LU1.4B_V1": {
+        "is_initially_opened": false
+    },
+    "LU1.4B_V2": {
+        "is_initially_opened": false
+    },
+    "LU1.4B_V3": {
+        "is_initially_opened": false
+    },
+    "LU1.4B_V4": {
+        "is_initially_opened": false
+    },
+    "LU1.4B_V5": {
+        "is_initially_opened": false
+    },
+    "LU1.4B_V6": {
+        "is_initially_opened": false
+    },
+    "NPS2": {
+    },
+    "LU2.2A_V1": {
+    },
+    "LU2.2A_V2": {
+    },
+    "LU2.2B_V1": {
+        "is_initially_opened": false
+    },
+    "LU2.2B_V3": {
+        "is_initially_opened": false
+    },
+    "LU2.2B_V4": {
+        "is_initially_opened": false
+    },
+    "LU2.2B_V5": {
+        "is_initially_opened": false
+    },
+    "NPS3": {
+    },
+    "NPS4_V1": {
+    },
+    "Src1_V1": {
+    },
+    "Src1_V2": {
+    },
+    "NPS4": {
+    },
+    "LU4.2A_V1": {
+    },
+    "LU4.2A_V2": {
+    },
+    "LU4.2B_V1": {
+        "is_initially_opened": false
+    },
+    "LU4.2B_V3": {
+        "is_initially_opened": false
+    },
+    "LU4.2B_V4": {
+        "is_initially_opened": false
+    },
+    "LU4.2B_V5": {
+        "is_initially_opened": false
+    },
+    "NPS5_V1": {
+    },
+    "Src2_V1": {
+    },
+    "Src2_V2": {
+    },
+    "NPS5": {
+    },
+    "NPS6": {
+    },
+    "LU6.2A_V1": {
+    },
+    "LU6.2A_V2": {
+    },
+    "LU6.2B_V1": {
+        "is_initially_opened": false
+    },
+    "LU6.2B_V2": {
+        "is_initially_opened": false
+    },
+    "LU6.2B_V3": {
+        "is_initially_opened": false
+    },
+    "LU6.2B_V4": {
+        "is_initially_opened": false
+    },
+    "LU6.2B_V5": {
+        "is_initially_opened": false
+    },
+    "LU6.2B_V6": {
+        "is_initially_opened": false
+    },
+    "LU6.2B_V6_2": {
+        "is_initially_opened": false
+    },
+    "RP2_V1": {
+    }
+}

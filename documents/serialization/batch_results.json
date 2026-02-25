@@ -1,0 +1,192 @@
+{
+  "layers": [
+    {
+      "step": "0",
+      "buffers": {
+        "pipes": {
+          "Pipe1": {
+            "std_volumetric_flow": "1",
+            "coordinates": ["0", "1000", "2000"],
+            "profiles": {
+              "density_std": ["850", "850", "850"],
+              "density_std_confidence": ["0", "0", "0"],
+              "viscosity_working": ["10", "10", "10"],
+              "viscosity_working_confidence": ["0", "0", "0"],
+              "pressure": ["500000", "500000", "500000"]
+            }
+          }
+        },
+        "sources": {
+          "Source1": {
+            "std_volumetric_flow": "1",
+            "parameters": {
+              "density_std": "850",
+              "density_std_confidence": "0",
+              "viscosity_working": "10",
+              "viscosity_working_confidence": "0",
+              "pressure": "500000",
+              "mass_flow": "85"
+            }
+          }
+        },
+        "lumpeds": {
+          "Lumped1": {
+            "std_volumetric_flow": "1",
+            "parameters_in": {
+              "density": "850",
+              "density_confidence": "0",
+              "viscosity": "1e-5",
+              "viscosity_confidence": "0",
+              "pressure": "500000",
+              "mass_flow": "0.85"
+            },
+            "parameters_out": {
+              "density": "850",
+              "density_confidence": "0",
+              "viscosity": "1e-5",
+              "viscosity_confidence": "0",
+              "pressure": "480000",
+              "mass_flow": "0.85"
+            }
+          }
+        }
+      },
+      "hydraulic_specific": {
+        "sources": {
+          "Source1": {
+            "source_mode": "std_vol_flow"
+          }
+        },
+        "pipes": {},
+        "pumps": {
+          "Pump1": {
+            "frequency": "50",
+            "performance_factor": "0.98",
+            "current": "150"
+          }
+        },
+        "valves": {
+          "Valve1": {
+            "current_opening": "0.75"
+          }
+        },
+        "heaters": {
+          "Heater1": {}
+        },
+        "improvers": {}
+      },
+      "transport_specific": {
+        "sources": {
+          "Source1": {}
+        },
+        "lumpeds": {
+          "Lumped1": {}
+        },
+        "pipes": {
+          "Pipe1": {}
+        },
+        "pumps": {
+          "Pump1": {}
+        },
+        "heaters": {
+          "Heater1": {}
+        },
+        "improvers": {
+          "Improver1": {
+            "flow_improver_volumetric_flow20": "0.01",
+            "flow_improver_mass_flow": "0.0085",
+            "concentration": "0.001",
+            "flow_improver_mass_concentration": "0.001",
+            "flow_improver_volumetric_concentration": "0.001",
+            "mode": "0",
+            "is_mass_concentraion": "true"
+          }
+        }
+      }
+    },
+    {
+      "step": "1",
+      "buffers": {
+        "pipes": {
+          "Pipe1": {
+            "std_volumetric_flow": "1.1",
+            "coordinates": ["0", "1000", "2000"],
+            "profiles": {
+              "density": ["851", "851", "851"],
+              "density_confidence": ["0", "0", "0"],
+              "viscosity": ["11", "11", "11"],
+              "viscosity_confidence": ["0", "0", "0"],
+              "pressure": ["510000", "510000", "510000"]
+            }
+          }
+        },
+        "sources": {
+          "Source1": {
+            "std_volumetric_flow": "1.1",
+            "parameters": {
+              "density": "851",
+              "density_confidence": "0",
+              "viscosity": "11",
+              "viscosity_confidence": "0",
+              "pressure": "510000",
+              "mass_flow": "93.6"
+            }
+          }
+        },
+        "lumpeds": {}
+      },
+      "hydraulic_specific": {
+        "sources": {
+          "Source1": {
+            "source_mode": "std_vol_flow"
+          }
+        },
+        "pipes": {},
+        "pumps": {
+          "Pump1": {
+            "frequency": "51",
+            "performance_factor": "0.99",
+            "current": "155"
+          }
+        },
+        "valves": {
+          "Valve1": {
+            "current_opening": "0.80"
+          }
+        },
+        "heaters": {
+          "Heater1": {}
+        },
+        "improvers": {}
+      },
+      "transport_specific": {
+        "sources": {
+          "Source1": {}
+        },
+        "lumpeds": {
+          "Lumped1": {}
+        },
+        "pipes": {
+          "Pipe1": {}
+        },
+        "pumps": {
+          "Pump1": {}
+        },
+        "heaters": {
+          "Heater1": {}
+        },
+        "improvers": {
+          "Improver1": {
+            "flow_improver_volumetric_flow20": "0.011",
+            "flow_improver_mass_flow": "0.00935",
+            "concentration": "0.0011",
+            "flow_improver_mass_concentration": "0.0011",
+            "flow_improver_volumetric_concentration": "0.0011",
+            "mode": "0",
+            "is_mass_concentraion": "true"
+          }
+        }
+      }
+    }
+  ]
+}

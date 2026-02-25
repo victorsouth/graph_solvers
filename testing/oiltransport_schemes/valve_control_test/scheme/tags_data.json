@@ -1,0 +1,15 @@
+{
+    "Src": {
+        "density_std_out": "Src_density_out"
+	},
+	"Vlv2": {
+        "vol_flow_std_in": {
+            "Tag": "Vlv2_vol_flow_in",
+            "Dim": "m3/h"
+        },
+		"valve_state_scada": "Vlv2_Status"
+    },
+    "Vlv1": {
+		"valve_state_scada": "Vlv1_Status"
+    }
+}

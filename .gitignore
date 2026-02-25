@@ -23,3 +23,5 @@ compile_commands.json
 /netadapter/GraphSolversNet/obj
 /netadapter/Tests/bin
 /netadapter/Tests/obj
+/testing/test_oilnet_out/*
+.DS_Store

@@ -1,0 +1,37 @@
+{
+    "Src1": {
+        "density_std_out": "rho_in1",
+        "vol_flow_std_out": {
+            "Tag": "q_in1",
+            "Dim": "m3/h"
+        }
+    },
+    "Src2": {
+        "vol_flow_std_out": {
+            "Tag": "q_in2",
+            "Dim": "m3/h"
+        },
+        "density_std_out": "rho_in2"
+    },
+    "Src3": {
+        "vol_flow_std_out": {
+            "Tag": "q_in3",
+            "Dim": "m3/h"
+        },
+        "density_std_out": "rho_in3"
+    },
+    "Src4": {
+        "vol_flow_std_out": {
+            "Tag": "q_in4",
+            "Dim": "m3/h"
+        },
+        "density_std_out": "rho_in4"
+    },
+    "Sink": {
+        "vol_flow_std_in": {
+            "Tag": "q_out",
+            "Dim": "m3/h"
+        },
+        "density_std_out": "rho_out"
+    }
+}

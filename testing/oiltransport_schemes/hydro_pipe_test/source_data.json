@@ -1,0 +1,10 @@
+{
+    "Src": {
+		"pressure": 110e3,
+		"density": 850,
+		"temperature": 293
+    },
+    "Snk": {
+		"pressure": 100e3
+    }
+}

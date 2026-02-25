@@ -1,0 +1,256 @@
+stages:
+  - Static_test
+  - Defining_branches
+  - Build
+  - Unit_Testing
+
+#==================================================================================================
+# load branches (utils)
+#==================================================================================================
+
+.load_branches_sh:
+  script:
+    - export $(cat branches.txt | xargs)
+
+.load_branches_ps:
+  script:
+    - |
+      Get-Content branches.txt | ForEach-Object {
+        $parts = $_ -split '='
+        $variableName = $parts[0]
+        $variableValue = $parts[1]
+        Set-Item -Path "ENV:$variableName" -Value $variableValue
+      }
+
+#==================================================================================================
+# Static_test
+#==================================================================================================
+ 
+#Проверка кодировки файлов с расширением .m .cpp .h на соответствие UTF-8
+Unicode:
+  stage: Static_test
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/gcc
+  script:
+    - mkdir -p pipeline/pipeline_result
+    - touch encoding_error_list.txt pipeline/pipeline_result
+    - bash pipeline/pipeline_scripts/unicode_check.sh
+  allow_failure: true
+  artifacts:
+    expire_in: 48 hour
+    when: on_failure
+    paths:
+      - pipeline/pipeline_result
+
+Doxygen:
+  stage: Static_test
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/greenbone/doxygen:latest
+  script:
+    - mkdir -p pipeline/pipeline_result
+    - bash ./pipeline/pipeline_scripts/doxygen_test.sh
+  allow_failure: true
+  artifacts:
+    expire_in: 48 hour
+    when: always
+    paths:
+      - pipeline/pipeline_result
+
+Clang:
+  stage: Static_test
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/jhasse/clang-tidy:latest
+  #image: jhasse/clang-tidy
+  script:
+    - mkdir -p pipeline/pipeline_result
+    - bash ./pipeline/pipeline_scripts/Clang_test.sh
+  allow_failure: true
+  artifacts:
+    expire_in: 48 hour
+    when: always
+    paths:
+      - pipeline/pipeline_result
+
+#==================================================================================================
+# Defining_branches
+#==================================================================================================
+
+#Выбор веток
+Defining_branches:
+  stage: Defining_branches
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/gcc
+  script:
+    - bash pipeline/pipeline_scripts/defining_branch.sh
+  allow_failure: false
+  artifacts:
+    expire_in: 48 hour
+    when: always
+    paths:
+      - branches.txt
+
+#==================================================================================================
+# Build
+#==================================================================================================
+
+#Сборка проекта GCC
+GCC_build:
+  stage: Build
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/gcc_cmake_boost_eigen_gtest:latest
+  script:
+    - !reference [.load_branches_sh, script]
+    - git clone https://gitlab-ci-token:${CI_FIXED_SOLVERS_TOKEN}@git.ktk.gubkin.ru/solvers/fixed_solvers.git --depth 1 -b $FIXED_SOLVERS_BRANCH
+    - git clone https://gitlab-ci-token:${CI_PDE_SOLVERS_TOKEN}@git.ktk.gubkin.ru/solvers/pde_solvers.git --depth 1 -b $PDE_SOLVERS_BRANCH
+    - |
+      cd ${CI_PROJECT_DIR}/fixed_solvers
+      bash pipeline/pipeline_scripts/build.sh GCC
+      cp -r Libs/ ${CI_PROJECT_DIR}/pde_solvers
+      cd ${CI_PROJECT_DIR}/pde_solvers
+      bash pipeline/pipeline_scripts/build.sh GCC
+      cp -r Libs/ ${CI_PROJECT_DIR}
+      cd ${CI_PROJECT_DIR}
+    - bash pipeline/pipeline_scripts/build.sh GCC
+  allow_failure: false
+  artifacts:
+    expire_in: 24 hour
+    when: always
+    paths:
+      - pipeline/pipeline_result
+      - fixed_solvers/pipeline/pipeline_result
+      - pde_solvers/pipeline/pipeline_result
+      - Libs/GCC
+
+#Сборка проекта Clang
+Clang_build:
+  stage: Build
+  tags:
+    - dev-build-clang
+  script:
+    - !reference [.load_branches_ps, script]
+    - git clone https://gitlab-ci-token:${CI_FIXED_SOLVERS_TOKEN}@git.ktk.gubkin.ru/solvers/fixed_solvers.git --depth 1 -b $env:FIXED_SOLVERS_BRANCH
+    - git clone https://gitlab-ci-token:${CI_PDE_SOLVERS_TOKEN}@git.ktk.gubkin.ru/solvers/pde_solvers.git --depth 1 -b $env:PDE_SOLVERS_BRANCH
+    - |
+      cd ${CI_PROJECT_DIR}/fixed_solvers
+      c:\msys64\msys2_shell.cmd -defterm -here -no-start -clang64 -c "./pipeline/pipeline_scripts/build.sh Clang"
+      cp -r Libs/ ${CI_PROJECT_DIR}/pde_solvers
+      cd ${CI_PROJECT_DIR}/pde_solvers
+      c:\msys64\msys2_shell.cmd -defterm -here -no-start -clang64 -c "./pipeline/pipeline_scripts/build.sh Clang"
+      cp -r Libs/ ${CI_PROJECT_DIR}
+      cd ${CI_PROJECT_DIR}
+    - c:\msys64\msys2_shell.cmd -defterm -here -no-start -clang64 -c "./pipeline/pipeline_scripts/build.sh Clang"
+  allow_failure: false
+  artifacts:
+    expire_in: 24 hour
+    when: always
+    paths:
+      - pipeline/pipeline_result
+      - fixed_solvers/pipeline/pipeline_result
+      - pde_solvers/pipeline/pipeline_result
+      - Libs/Clang
+
+#Сборка проекта MinGW
+MinGW_build:
+  stage: Build
+  tags:
+    - ktk-dev-build
+  script:
+    - !reference [.load_branches_ps, script]
+    - git clone https://gitlab-ci-token:${CI_FIXED_SOLVERS_TOKEN}@git.ktk.gubkin.ru/solvers/fixed_solvers.git --depth 1 -b $env:FIXED_SOLVERS_BRANCH
+    - git clone https://gitlab-ci-token:${CI_PDE_SOLVERS_TOKEN}@git.ktk.gubkin.ru/solvers/pde_solvers.git --depth 1 -b $env:PDE_SOLVERS_BRANCH
+    - |
+      cd ${CI_PROJECT_DIR}/fixed_solvers
+      c:\msys64\msys2_shell.cmd -defterm -here -no-start -mingw64 -c "./pipeline/pipeline_scripts/build.sh MinGW"
+      cp -r Libs/ ${CI_PROJECT_DIR}/pde_solvers
+      cd ${CI_PROJECT_DIR}/pde_solvers
+      c:\msys64\msys2_shell.cmd -defterm -here -no-start -mingw64 -c "./pipeline/pipeline_scripts/build.sh MinGW"
+      cp -r Libs/ ${CI_PROJECT_DIR}
+      cd ${CI_PROJECT_DIR}
+    - c:\msys64\msys2_shell.cmd -defterm -here -no-start -mingw64 -c "./pipeline/pipeline_scripts/build.sh MinGW"
+  allow_failure: false
+  artifacts:
+    expire_in: 24 hour
+    when: always
+    paths:
+      - pipeline/pipeline_result
+      - fixed_solvers/pipeline/pipeline_result
+      - pde_solvers/pipeline/pipeline_result
+      - Libs/MinGW
+ 
+ # Запуск тестов с использованием GTest
+research_oiltransport:
+  stage: Unit_Testing
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/gcc_cmake_boost_eigen_gtest:latest
+  script:
+    - bash pipeline/pipeline_scripts/tests_start.sh GCC research_oiltransport
+  needs: [GCC_build]
+  dependencies: [GCC_build]
+  allow_failure: false
+  artifacts:
+    expire_in: 1 week
+    when: always
+    paths:
+      - branches.txt
+      - pipeline/pipeline_result
+      - Libs
+
+testing_graphs:
+  stage: Unit_Testing
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/gcc_cmake_boost_eigen_gtest:latest
+  script:
+    - bash pipeline/pipeline_scripts/tests_start.sh GCC testing_graphs
+  needs: [GCC_build]
+  dependencies: [GCC_build]
+  allow_failure: false
+  artifacts:
+    expire_in: 1 week
+    when: always
+    paths:
+      - branches.txt
+      - pipeline/pipeline_result
+      - Libs
+
+testing_hydronet:
+  stage: Unit_Testing
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/gcc_cmake_boost_eigen_gtest:latest
+  script:
+    - bash pipeline/pipeline_scripts/tests_start.sh GCC testing_hydronet
+  needs: [GCC_build]
+  dependencies: [GCC_build]
+  allow_failure: false
+  artifacts:
+    expire_in: 1 week
+    when: always
+    paths:
+      - branches.txt
+      - pipeline/pipeline_result
+      - Libs
+
+testing_oiltransport:
+  stage: Unit_Testing
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/gcc_cmake_boost_eigen_gtest:latest
+  script:
+    - bash pipeline/pipeline_scripts/tests_start.sh GCC testing_oiltransport
+  needs: [GCC_build]
+  dependencies: [GCC_build]
+  allow_failure: false
+  artifacts:
+    expire_in: 1 week
+    when: always
+    paths:
+      - branches.txt
+      - pipeline/pipeline_result
+      - Libs

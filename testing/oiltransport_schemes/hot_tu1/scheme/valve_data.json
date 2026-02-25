@@ -1,0 +1,257 @@
+{
+    "RP1_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "NPS1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.2A_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.2A_V2": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.2B_V1": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.2B_V2": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.2B_V3": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.2B_V4": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.2B_V5": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.2B_V6": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.4A_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.4A_V2": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.4B_V1": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.4B_V2": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.4B_V3": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.4B_V4": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.4B_V5": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU1.4B_V6": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "NPS2": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU2.2A_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU2.2A_V2": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU2.2B_V1": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU2.2B_V3": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU2.2B_V4": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU2.2B_V5": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "NPS3": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "NPS4_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "Src1_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "Src1_V2": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "NPS4": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU4.2A_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU4.2A_V2": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU4.2B_V1": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU4.2B_V3": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU4.2B_V4": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU4.2B_V5": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "NPS5_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "Src2_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "Src2_V2": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "NPS5": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "NPS6": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU6.2A_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU6.2A_V2": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU6.2B_V1": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU6.2B_V2": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU6.2B_V3": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU6.2B_V4": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU6.2B_V5": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU6.2B_V6": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "LU6.2B_V6_2": {
+        "initial_opening": 0,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "RP2_V1": {
+		"initial_opening": 1,
+		"xi": 0.03,
+		"diameter": 0.2
+    }
+}

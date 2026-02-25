@@ -1,0 +1,10 @@
+{
+    "Src1": {
+        "std_volflow": 1,
+        "density": 843
+    },
+    "Sink": {
+        "pressure": 1e5,
+        "density": 850
+    }
+}

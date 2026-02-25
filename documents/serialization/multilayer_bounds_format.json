@@ -1,0 +1,84 @@
+{
+	"layers": [
+		{
+			"step": "0",
+			"transport_measurements": [
+				{
+					"edge": "Vlv1",
+					"type": "vol_flow_std",
+					"value": 0.9
+				},
+				{
+					"vertex": 1,
+					"type": "density_std_out",
+					"value": 886.0
+				}
+			],
+			"controls": {
+				"pumps": [],
+				"improvers": {
+					"Improver1": {
+						"concentration": "0.001"
+					}
+				},
+				"valves": {
+					"Vlv1": {
+						"opening": 0.5
+					},
+					"Vlv2": {
+						"opening": 1
+					}
+				},
+				"sources": {
+					"Src1": {
+						"pressure": 100000.0
+					},
+					"Snk1": {
+						"std_vol_flow": 1.0,
+						"density_std_out": 1.0
+					}
+				}
+			}
+		},
+		{
+			"step": "1",
+			"transport_measurements": [
+				{
+					"edge": "Vlv1",
+					"type": "vol_flow_std",
+					"value": 0.9
+				},
+				{
+					"vertex": 1,
+					"type": "density_std_out",
+					"value": 886.0
+				}
+			],
+			"controls": {
+				"pumps": [],
+				"improvers": {
+					"Improver1": {
+						"concentration": "0.001"
+					}
+				},
+				"valves": {
+					"Vlv1": {
+						"opening": 0.5
+					},
+					"Vlv2": {
+						"is_opened": true
+					}
+				},
+				"sources": {
+					"Src1": {
+						"pressure": 100000.0
+					},
+					"Snk1": {
+						"std_vol_flow": 1.0,
+						"density_std_out": 1.0
+					}
+				}
+			}
+		}
+	]
+}

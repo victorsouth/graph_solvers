@@ -1,0 +1,8 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+find_dependency(pde_solvers)
+find_dependency(Boost REQUIRED)
+
+include ( "${CMAKE_CURRENT_LIST_DIR}/graph_solversTargets.cmake" )
+
+

@@ -1,0 +1,79 @@
+{
+    "RP1": {
+        "to": 0
+    },
+    "RP7": {
+        "from": 16
+    },
+    "NPZ": {
+        "from": 17
+    },
+    "NPS1_valve": {
+        "from": 0,
+        "to": 1
+    },
+    "NPS7_valve": {
+        "from": 15,
+        "to": 16
+    },
+    "NPZ_valve": {
+        "from": 7,
+        "to": 17
+    },
+    "NPS1": {
+        "from": 1,
+        "to": 2
+    },
+    "NPS2": {
+        "from": 3,
+        "to": 4
+    },
+    "NPS3": {
+        "from": 5,
+        "to": 6
+    },
+    "NPS4": {
+        "from": 8,
+        "to": 9
+    },
+    "NPS5": {
+        "from": 10,
+        "to": 11
+    },
+    "NPS6": {
+        "from": 12,
+        "to": 13
+    },
+    "NPS7": {
+        "from": 14,
+        "to": 15
+    },
+    "LU1": {
+        "from": 2,
+        "to": 3
+    },
+    "LU2": {
+        "from": 4,
+        "to": 5
+    },
+    "LU3a": {
+        "from": 6,
+        "to": 7
+    },
+    "LU3b": {
+        "from": 7,
+        "to": 8
+    },
+    "LU4": {
+        "from": 9,
+        "to": 10
+    },
+    "LU5": {
+        "from": 11,
+        "to": 12
+    },
+    "LU6": {
+        "from": 13,
+        "to": 14
+    }
+}

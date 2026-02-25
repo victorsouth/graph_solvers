@@ -1,0 +1,7 @@
+{
+    "Pipe": {
+        "X_start": 0,
+        "X_end": 100e3,
+        "Diameter": 1.0
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "NPS1": {
+    "vol_flow_std_out":
+    {
+      "Tag": "q_nps1",
+      "Dim": "m3/h"
+    },
+    "density_std_out": "rho_nps1"
+  },
+  "Src1": {
+    "vol_flow_std_out":
+    {
+      "Tag": "q_src1",
+      "Dim": "m3/h"
+    },
+    "density_std_out": "rho_src1"
+  },
+  "Src2": {
+    "vol_flow_std_out":
+    {
+      "Tag": "q_src2",
+      "Dim": "m3/h"
+    },
+    "density_std_out": "rho_src2"
+  },
+    "NPS4": {
+        "density_std_out": "rho_nps4"
+    }
+}

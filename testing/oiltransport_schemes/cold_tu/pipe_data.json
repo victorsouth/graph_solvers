@@ -1,0 +1,49 @@
+{
+    "LU1": {
+        "Name": "NPS1_NPS2",
+        "X_start": 1646.795,
+        "X_end": 1717.561,
+        "Diameter": 1.0,
+    },
+    "LU2": {
+        "Name": "NPS2_NPS3",
+        "X_start": 1717.561,
+        "X_end": 1797.075,
+        "Diameter": 1.0,
+    },
+    "LU3a": {
+        "Name": "NPS3_NPZ",
+        "X_start": 1797.075,
+        "X_end": 1815,
+        "Diameter": 1.0,
+        "Tags": {}
+    },
+    "LU3b": {
+        "Name": "NPZ_NPS4",
+        "X_start": 1815,
+        "X_end": 1874.897,
+        "Diameter": 1.0,
+        "Tags": {}
+    },
+    "LU4": {
+        "Name": "NPS4_NPS5",
+        "X_start": 1874.897,
+        "X_end": 1941.686,
+        "Diameter": 1.0,
+        "Tags": {}
+    },
+    "LU5": {
+        "Name": "NPS5_NPS6",
+        "X_start": 1941.686,
+        "X_end": 2019.454,
+        "Diameter": 1.0,
+        "Tags": {}
+    },
+    "LU6": {
+        "Name": "NPS6_NPS7",
+        "X_start": 2019.454,
+        "X_end": 2078.469,
+        "Diameter": 1.0,
+        "Tags": {}
+    }
+}

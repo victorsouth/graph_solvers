@@ -1,0 +1,14 @@
+{
+	"Src1": {
+    },
+    "Src2": {
+    },
+	"Sink": {
+    },
+	"Bik1": {
+        "is_initially_zeroflow": true
+    },
+	"Bik2": {
+        "is_initially_zeroflow": true
+    }
+}

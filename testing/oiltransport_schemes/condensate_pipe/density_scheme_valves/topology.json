@@ -1,0 +1,101 @@
+{
+    "Src1": {
+        "to": 0
+    },
+    "Src2": {
+        "to": 6
+    },
+    "Src3": {
+        "to": 6
+    },
+    "Src4": {
+        "to": 9
+    },
+    "Sink": {
+        "from": 16
+    },
+    "Uzr": {
+        "from": 12,
+        "to": 13
+    },
+    "Pipe1a": {
+        "from": 1,
+        "to": 3
+    },
+    "Pipe1b": {
+        "from": 2,
+        "to": 3
+    },
+    "Pipe2a": {
+        "from": 4,
+        "to": 6
+    },
+    "Pipe2b": {
+        "from": 5,
+        "to": 6
+    },
+    "Pipe3a": {
+        "from": 7,
+        "to": 9
+    },
+    "Pipe3b": {
+        "from": 8,
+        "to": 9
+    },
+    "Pipe4a": {
+        "from": 10,
+        "to": 12
+    },
+    "Pipe4b": {
+        "from": 11,
+        "to": 12
+    },
+    "Pipe5a": {
+        "from": 14,
+        "to": 16
+    },
+    "Pipe5b": {
+        "from": 15,
+        "to": 16
+    },
+    "Valve1a": {
+        "from": 0,
+        "to": 1
+    },
+    "Valve1b": {
+        "from": 0,
+        "to": 2
+    },
+    "Valve2a": {
+        "from": 3,
+        "to": 4
+    },
+    "Valve2b": {
+        "from": 3,
+        "to": 5
+    },
+    "Valve3a": {
+        "from": 6,
+        "to": 7
+    },
+    "Valve3b": {
+        "from": 6,
+        "to": 8
+    },
+    "Valve4a": {
+        "from": 9,
+        "to": 10
+    },
+    "Valve4b": {
+        "from": 9,
+        "to": 11
+    },
+    "Valve5a": {
+        "from": 13,
+        "to": 14
+    },
+    "Valve5b": {
+        "from": 13,
+        "to": 15
+    }
+}

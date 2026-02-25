@@ -1,0 +1,31 @@
+{
+  "solution_method": "FindFlowFromMeasurements",
+  "pipe_coordinate_step": 200.0,
+  "structured_transport_solver": {
+    "rebind_zeroflow_measurements": true,
+    "endogenous_options": {
+      "density_std": true,
+      "viscosity_working": true,
+      "sulfur": false,
+      "temperature": false,
+      "improver": false,
+      "viscosity0": false,
+      "viscosity20": false,
+      "viscosity50": false
+    },
+    "block_solver": {
+      "use_simple_block_flow_heuristic": false
+    },
+    "graph_solver": {}
+  },
+  "structured_hydro_solver": {
+    "nodal_solver": {
+      "random_pressure_deviation": 0.0,
+      "max_iterations": 100,
+      "line_search_max_iterations": 100,
+      "line_search_function_decrement_factor": 10.0,
+      "argument_increment_norm_tolerance": 1e-6,
+      "residuals_norm_tolerance": 1e-8
+    }
+  }
+}

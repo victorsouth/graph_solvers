@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GraphSolversNet\GraphSolversNet.csproj" />
+  </ItemGroup>
+
+  <!-- PreBuild event: копирование DLL из netadapter/bin в папку тестов -->
+  <Target Name="CopyAdapterDll" BeforeTargets="BeforeBuild">
+    <PropertyGroup>
+      <AdapterDllSource>$(MSBuildThisFileDirectory)..\bin\GraphSolversAdapter.dll</AdapterDllSource>
+      <AdapterDllDestination>$(OutputPath)GraphSolversAdapter.dll</AdapterDllDestination>
+    </PropertyGroup>
+    
+    <Message Text="Копирование GraphSolversAdapter.dll из $(AdapterDllSource) в $(AdapterDllDestination)" Importance="normal" />
+    <Copy 
+      SourceFiles="$(AdapterDllSource)" 
+      DestinationFiles="$(AdapterDllDestination)"
+      SkipUnchangedFiles="true"
+      Condition="Exists('$(AdapterDllSource)')" />
+    <Warning Text="GraphSolversAdapter.dll не найден по пути: $(AdapterDllSource). Убедитесь, что адаптер собран через CMake с опцией GRAPH_SOLVERS_BUILD_ADAPTER=ON." 
+             Condition="!Exists('$(AdapterDllSource)')" />
+  </Target>
+
+</Project>
+

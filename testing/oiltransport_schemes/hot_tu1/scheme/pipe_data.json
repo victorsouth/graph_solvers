@@ -1,0 +1,107 @@
+{
+    "LU1.1": {
+        "X_start": 0,
+        "X_end": 41945,
+        "Diameter": 0.7
+    },
+    "LU1.2A": {
+        "X_start": 41945,
+        "X_end": 45155,
+        "Diameter": 0.7
+    },
+    "LU1.2B": {
+        "X_start": 41945,
+        "X_end": 45155,
+        "Diameter": 0.7
+    },
+    "LU1.3": {
+        "X_start": 45155,
+        "X_end": 81400,
+        "Diameter": 0.7
+    },
+    "LU1.4A": {
+        "X_start": 81400,
+        "X_end": 83075,
+        "Diameter": 0.7
+    },
+    "LU1.4B": {
+        "X_start": 81400,
+        "X_end": 83075,
+        "Diameter": 0.7
+    },
+    "LU1.5": {
+        "X_start": 83075,
+        "X_end": 108500,
+        "Diameter": 0.7
+    },
+    "LU2.1": {
+        "X_start": 108500,
+        "X_end": 165865,
+        "Diameter": 0.7
+    },
+    "LU2.2A": {
+        "X_start": 165865,
+        "X_end": 167625,
+        "Diameter": 0.7
+    },
+    "LU2.2B": {
+        "X_start": 165865,
+        "X_end": 167625,
+        "Diameter": 0.7
+    },
+    "LU2.3": {
+        "X_start": 167625,
+        "X_end": 169835,
+        "Diameter": 0.7
+    },
+    "LU3.1": {
+        "X_start": 169835,
+        "X_end": 214770,
+        "Diameter": 0.7
+    },
+    "LU4.1": {
+        "X_start": 214770,
+        "X_end": 214900,
+        "Diameter": 0.7
+    },
+    "LU4.2A": {
+        "X_start": 214900,
+        "X_end": 215500,
+        "Diameter": 0.7
+    },
+    "LU4.2B": {
+        "X_start": 214900,
+        "X_end": 215500,
+        "Diameter": 0.7
+    },
+    "LU4.3": {
+        "X_start": 215500,
+        "X_end": 289130,
+        "Diameter": 0.7
+    },
+    "LU5.1": {
+        "X_start": 289130,
+        "X_end": 344590,
+        "Diameter": 0.7
+    },
+    "LU6.1": {
+        "X_start": 344590,
+        "X_end": 407675,
+        "Diameter": 0.7
+    },
+    "LU6.2A": {
+        "X_start": 407675,
+        "X_end": 408335,
+        "Diameter": 0.7
+    },
+    "LU6.2B": {
+        "X_start": 407675,
+        "X_end": 408335,
+        "Diameter": 0.7
+    },
+    "LU6.3": {
+        "X_start": 408335,
+        "X_end": 410640,
+        "Diameter": 0.7
+    }
+}

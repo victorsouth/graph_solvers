@@ -1,0 +1,39 @@
+{
+    "Src1": {
+        "vol_flow_std_out": "q_in1",
+        "density_std_out": "rho_in1"
+    },
+    "Src2": {
+        "vol_flow_std_out": "q_in2",
+        "density_std_out": "rho_in2"
+    },
+    "Src3": {
+        "vol_flow_std_out": "q_in3",
+        "density_std_out": "rho_in3"
+    },
+    "Src4": {
+        "vol_flow_std_out": "q_in4",
+        "density_std_out": "rho_in4"
+    },
+    "Sink": {
+        "vol_flow_std_in": "q_out",
+        "density_std_out": "rho_out"
+    },
+    "Valve1a": {
+        "vol_flow_std_in": {
+            "Tag": "05_q_in1"
+        }
+    },
+    "Valve2a": {
+        "vol_flow_std_in": "05_q_in1"
+    },
+    "Valve3a": {
+        "vol_flow_std_in": "05_q_in123"
+    },
+    "Valve4a": {
+        "vol_flow_std_in": "05_q_in1234"
+    },
+    "Valve5a": {
+        "vol_flow_std_in": "05_q_in1234"
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "Src1": {
+        "to": 0
+    },
+    "Src2": {
+        "to": 2
+    },
+    "Src3": {
+        "to": 2
+    },
+    "Src4": {
+        "to": 4
+    },
+    "Sink": {
+        "from": 6
+    },
+    "Uzr": {
+        "from": 4,
+        "to": 5
+    },
+    "Pipe1a": {
+        "from": 0,
+        "to": 1
+    },
+    "Pipe1b": {
+        "from": 0,
+        "to": 1
+    },
+    "Pipe2a": {
+        "from": 1,
+        "to": 2
+    },
+    "Pipe2b": {
+        "from": 1,
+        "to": 2
+    },
+    "Pipe3a": {
+        "from": 2,
+        "to": 3
+    },
+    "Pipe3b": {
+        "from": 2,
+        "to": 3
+    },
+    "Pipe4a": {
+        "from": 3,
+        "to": 4
+    },
+    "Pipe4b": {
+        "from": 3,
+        "to": 4
+    },
+    "Pipe5a": {
+        "from": 5,
+        "to": 6
+    },
+    "Pipe5b": {
+        "from": 5,
+        "to": 6
+    }
+}

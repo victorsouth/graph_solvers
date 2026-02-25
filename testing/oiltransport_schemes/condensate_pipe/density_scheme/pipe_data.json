@@ -1,0 +1,52 @@
+{
+    "Pipe1a": {
+        "X_start": 0,
+        "X_end": 8800,
+        "Diameter": 0.513
+    },
+    "Pipe1b": {
+        "X_start": 200,
+        "X_end": 8800,
+        "Diameter": 0.513
+    },
+    "Pipe2a": {
+        "X_start": 0,
+        "X_end": 800,
+        "Diameter": 0.705
+    },
+    "Pipe2b": {
+        "X_start": 0,
+        "X_end": 800,
+        "Diameter": 0.705
+    },
+    "Pipe3a": {
+        "X_start": 800,
+        "X_end": 160700,
+        "Diameter": 0.705
+    },
+    "Pipe3b": {
+        "X_start": 800,
+        "X_end": 160700,
+        "Diameter": 0.705
+    },
+    "Pipe4a": {
+        "X_start": 160700,
+        "X_end": 693000,
+        "Diameter": 0.705
+    },
+    "Pipe4b": {
+        "X_start": 160700,
+        "X_end": 693000,
+        "Diameter": 0.705
+    },
+    "Pipe5a": {
+        "X_start": 693000,
+        "X_end": 698000,
+        "Diameter": 0.705
+    },
+    "Pipe5b": {
+        "X_start": 693000,
+        "X_end": 698000,
+        "Diameter": 0.705
+    }
+}

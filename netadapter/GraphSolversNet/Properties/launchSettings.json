@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GraphSolversNet": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
