@@ -1,0 +1,27 @@
+[==========] Running 6 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from BlockTreeTopologicalSort
+[ DISABLED ] BlockTreeTopologicalSort.DISABLED_BlockTopologicalSort
+[ RUN      ] BlockTreeTopologicalSort.ThrowsExceptionIfNotAllGraphElementsSorted
+[       OK ] BlockTreeTopologicalSort.ThrowsExceptionIfNotAllGraphElementsSorted (0 ms)
+[ RUN      ] BlockTreeTopologicalSort.IsConsistentWithExpertKnoledge_TwoBlocksScheme
+[       OK ] BlockTreeTopologicalSort.IsConsistentWithExpertKnoledge_TwoBlocksScheme (0 ms)
+[----------] 2 tests from BlockTreeTopologicalSort (0 ms total)
+
+[----------] 4 tests from IncidenceMatrix
+[ RUN      ] IncidenceMatrix.ReducesMatrix1
+[       OK ] IncidenceMatrix.ReducesMatrix1 (0 ms)
+[ RUN      ] IncidenceMatrix.SplitMatrix1
+[       OK ] IncidenceMatrix.SplitMatrix1 (0 ms)
+[ RUN      ] IncidenceMatrix.ReducesMatrix2
+[       OK ] IncidenceMatrix.ReducesMatrix2 (0 ms)
+[ RUN      ] IncidenceMatrix.SplitMatrix2
+[       OK ] IncidenceMatrix.SplitMatrix2 (0 ms)
+[----------] 4 tests from IncidenceMatrix (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 6 tests.
+
+  YOU HAVE 4 DISABLED TESTS
+

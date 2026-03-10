@@ -95,7 +95,7 @@ namespace GraphSolvers.Tests
             try
             {
                 // Act
-                int result = GraphSolversAPI.Init(model, topologyJson, objectsJson, "");
+                int result = GraphSolversAPI.Init(model, topologyJson, objectsJson, "{}");
 
                 // Assert
                 Assert.That(result, Is.EqualTo(0), "Init должна успешно инициализировать модель с простейшей схемой");

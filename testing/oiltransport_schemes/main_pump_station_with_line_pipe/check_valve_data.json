@@ -1,0 +1,42 @@
+{
+    "PNS1_P2_CV": {
+        "is_initially_closed_static": false,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+    "PNS1_P3_CV": {
+        "is_initially_closed_static": false,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+    "PNS1_P4_CV": {
+        "is_initially_closed_static": true,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+    "MNS1_P1_CV": {
+        "is_initially_closed_static": true,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+    "MNS1_P2_CV": {
+        "is_initially_closed_static": false,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+    "MNS1_P3_CV": {
+        "is_initially_closed_static": false,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+    "MNS1_P4_CV": {
+        "is_initially_closed_static": false,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+    "MNS1_CV": {
+        "is_initially_closed_static": false,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    }
+}

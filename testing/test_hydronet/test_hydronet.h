@@ -1,6 +1,6 @@
 #pragma once
 
-#include "graphs.h"
+#include "hydronet.h"
 
 
 #define GTEST_BREAK_ON_FAILURE 1
@@ -9,3 +9,6 @@
 #define _VARIADIC_MAX 10 /* for gtest */
 #include <gtest/gtest.h>
 
+namespace graphlib {
+;
+}

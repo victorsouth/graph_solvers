@@ -1,0 +1,47 @@
+{
+    "Valve1_C1": {
+		"initial_opening": 100,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "Valve2_C1": {
+		"initial_opening": 100,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+	"Valve3_C1": {
+		"initial_opening": 100,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "Valve4_C1": {
+		"initial_opening": 100,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+	"Valve5_C1": {
+		"initial_opening": 100,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "Valve1_C2": {
+		"initial_opening": 100,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+	"Valve2_C2": {
+		"initial_opening": 100,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+    "Valve3_C2": {
+		"initial_opening": 100,
+		"xi": 0.03,
+		"diameter": 0.2
+    },
+	"Valve4_C2": {
+		"initial_opening": 100,
+		"xi": 0.03,
+		"diameter": 0.2
+    }
+}

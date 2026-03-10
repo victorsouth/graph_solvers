@@ -142,7 +142,7 @@ TEST(NodalSolverBufferBased, UpdatesModelBuffers)
     // Act: решаем задачу потокораспределения с обновлением буферов моделей
     graphlib::flow_distribution_result_t result =
         solver.solve(solver_estimation_type_t::RandomInital,
-            graphlib::layer_offset_t::ToCurrentLayer, nullptr);
+            graphlib::layer_offset_t::ToCurrentLayer);
 
     // Assert: давления в буферах моделей совпадают с рассчитанными давлениями в узлах
 

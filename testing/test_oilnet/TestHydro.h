@@ -178,7 +178,7 @@ struct hydro_objects_properties {
     /// @brief Свойства источника (притока)
     using source = qsm_hydro_source_properties;
     /// @brief Свойства насоса
-    using pump = oil_transport::transport_lumped_parameters_t;
+    using pump = oil_transport::iso_qsm_pump_parameters;
 };
 
 // TODO: Перенести как метод в graph_json_data

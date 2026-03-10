@@ -1,0 +1,23 @@
+  Определение проектов для восстановления...
+  Восстановлен C:\GitLab-Runner\builds\u8zp2MNFo\0\solvers\graph_solvers\netadapter\GraphSolversNet\GraphSolversNet.csproj (за 426 мс).
+C:\GitLab-Runner\builds\u8zp2MNFo\0\solvers\graph_solvers\netadapter\GraphSolversNet\GraphSolvers.cs(48,17): warning CS0472: Результат выражения всегда равен "false", поскольку значение типа "nint" никогда не равно Null типа "nint?" [C:\GitLab-Runner\builds\u8zp2MNFo\0\solvers\graph_solvers\netadapter\GraphSolversNet\GraphSolversNet.csproj]
+  GraphSolversNet -> C:\GitLab-Runner\builds\u8zp2MNFo\0\solvers\graph_solvers\netadapter\GraphSolversNet\bin\Release\net8.0\GraphSolversNet.dll
+
+Сборка успешно завершена.
+
+C:\GitLab-Runner\builds\u8zp2MNFo\0\solvers\graph_solvers\netadapter\GraphSolversNet\GraphSolvers.cs(48,17): warning CS0472: Результат выражения всегда равен "false", поскольку значение типа "nint" никогда не равно Null типа "nint?" [C:\GitLab-Runner\builds\u8zp2MNFo\0\solvers\graph_solvers\netadapter\GraphSolversNet\GraphSolversNet.csproj]
+    Предупреждений: 1
+    Ошибок: 0
+
+Прошло времени 00:00:04.86
+  Определение проектов для восстановления...
+  Восстановлен C:\GitLab-Runner\builds\u8zp2MNFo\0\solvers\graph_solvers\netadapter\Tests\Tests.csproj (за 379 мс).
+  Проектов обновлено для восстановления: 1 из 2.
+  GraphSolversNet -> C:\GitLab-Runner\builds\u8zp2MNFo\0\solvers\graph_solvers\netadapter\GraphSolversNet\bin\Release\net8.0\GraphSolversNet.dll
+  Tests -> C:\GitLab-Runner\builds\u8zp2MNFo\0\solvers\graph_solvers\netadapter\Tests\bin\Release\net8.0\Tests.dll
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:02.76

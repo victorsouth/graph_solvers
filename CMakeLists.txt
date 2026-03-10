@@ -85,6 +85,8 @@ set(HEADER_OIL_HYDRO_MODELS
     src/oil_transport/models_hydro/hydro_model_interface.h
     src/oil_transport/models_hydro/hydro_source.h
     src/oil_transport/models_hydro/hydro_local_resistance.h
+    src/oil_transport/models_hydro/check_valve.h
+    src/oil_transport/models_hydro/hydro_pump.h
     src/oil_transport/models_hydro/simple_bufferless_models.h
     src/oil_transport/models_hydro/hydro_pipe.h
 )
@@ -129,6 +131,7 @@ set(SOURCE_OIL_TRANSPORT_PARSERS
 )
 set(HEADER_OIL_TRANSPORT_PARSERS
     src/oil_transport/serialization/graph_parser.h
+    src/oil_transport/serialization/json_model_parameters.h
     src/oil_transport/serialization/bounds_parser.h
     src/oil_transport/serialization/settings_parser.h
     src/oil_transport/serialization/results_serialization.h
@@ -271,7 +274,6 @@ endif()
 
 
 option(GRAPH_SOLVERS_BUILD_TESTS "" ON)
-option(GRAPH_SOLVERS_BUILD_CHEMDAE "" OFF)
 # Сборка тестов
 if(GRAPH_SOLVERS_BUILD_TESTS)
 
@@ -291,6 +293,7 @@ if(GRAPH_SOLVERS_BUILD_TESTS)
     
     set(TESTING_HYDRONET_HEADERS
         testing/test_hydronet/test_hydronet.h
+        testing/test_hydronet/BreakSplittables.h
     )
     set(TESTING_HYDRONET_SOURCE
         testing/test_hydronet/test_hydronet.cpp
@@ -303,17 +306,10 @@ if(GRAPH_SOLVERS_BUILD_TESTS)
         testing/test_oilnet/TestGraphBuilder.h
     )
 
-    if(GRAPH_SOLVERS_BUILD_CHEMDAE)
-        find_package(Boost REQUIRED COMPONENTS serialization)
-        find_package(vle_solvers REQUIRED)
-        set(TESTING_CHEMDAE_HEADERS
-            testing/test_chemdae/test_chemdae.h
-            testing/test_chemdae/TestDAE.h
-        )
-        set(TESTING_CHEMDAE_SOURCE
-            testing/test_chemdae/test_chemdae.cpp
-        )
-    endif()
+    set(TESTING_OIL_TRANSPORT_MODELS_HYDRO_HEADERS
+        testing/test_oilnet/ModelsHydro/Pump.h
+        testing/test_oilnet/ModelsHydro/LocalResistance.h
+    )
 
     set(TESTING_OIL_TRANSPORT_SOURCE
         testing/test_oilnet/TestGGA.cpp
@@ -340,6 +336,7 @@ if(GRAPH_SOLVERS_BUILD_TESTS)
     set(TESTING_OIL_TRANSPORT_TASK_HEADERS
         testing/test_oilnet/Task/CustomPipeSolver.h
         testing/test_oilnet/Task/MeasurementsCompleteness.h
+        testing/test_oilnet/Task/MeasurementsFuncs.h
         testing/test_oilnet/Task/TaskMeasuresHandling.h
         testing/test_oilnet/Task/TaskControlsHandling.h
         testing/test_oilnet/Task/HydroTransportTask.h
@@ -356,6 +353,7 @@ if(GRAPH_SOLVERS_BUILD_TESTS)
     set(TESTING_OIL_TRANSPORT_UTILS_HEADERS
         testing/test_oilnet/utils/task_test_utils.h
         testing/test_oilnet/utils/scheme_loaders.h
+        testing/test_oilnet/utils/serialization_utils.h
     )
 
     set(RESEARCH_OIL_TRANSPORT_HEADERS
@@ -387,18 +385,16 @@ if(GRAPH_SOLVERS_BUILD_TESTS)
     source_group("Header Files/GraphPropagationSolver" FILES ${TESTING_OIL_TRANSPORT_GRAPH_PROPAGATION_SOLVER_HEADERS})
 	source_group("Header Files/NodalSolver" FILES ${TESTING_OIL_TRANSPORT_NODAL_SOLVER_HEADERS})
     source_group("Header Files/Task" FILES ${TESTING_OIL_TRANSPORT_TASK_HEADERS})
+    source_group("Header Files/ModelsHydro" FILES ${TESTING_OIL_TRANSPORT_MODELS_HYDRO_HEADERS})
     source_group("Header Files/Serialization" FILES ${TESTING_OIL_TRANSPORT_SERIALIZATION_HEADERS})
     source_group("Header Files/Utils" FILES ${TESTING_OIL_TRANSPORT_UTILS_HEADERS})
 
     source_group("Header Files/" FILES ${RESEARCH_OIL_TRANSPORT_HEADERS})
     source_group("Source Files/" FILES ${RESEARCH_OIL_TRANSPORT_SOURCE})
 
-    if(GRAPH_SOLVERS_BUILD_CHEMDAE)
-        source_group("Header Files/" FILES ${TESTING_CHEMDAE_HEADERS})
-        source_group("Source Files/" FILES ${TESTING_CHEMDAE_SOURCE})
-    endif()
-
-      
+    # Список исполняемых единиц сборки (для задания поддержки big_obj)
+    set(TEST_EXECUTABLES "")
+    
     add_executable(testing_graphs 
         ${TESTING_GRAPHS_HEADERS} 
         ${TESTING_GRAPHS_SOURCE}
@@ -408,6 +404,7 @@ if(GRAPH_SOLVERS_BUILD_TESTS)
         PRIVATE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/testing/test_graphs>
     )
+    list(APPEND TEST_EXECUTABLES testing_graphs)
     install(TARGETS testing_graphs DESTINATION bin)
 
 
@@ -420,6 +417,7 @@ if(GRAPH_SOLVERS_BUILD_TESTS)
         PRIVATE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/testing/test_hydronet>
     )
+    list(APPEND TEST_EXECUTABLES testing_hydronet)
     install(TARGETS testing_hydronet DESTINATION bin)
     
 
@@ -432,27 +430,16 @@ if(GRAPH_SOLVERS_BUILD_TESTS)
         ${TESTING_OIL_TRANSPORT_SERIALIZATION_HEADERS}
         ${TESTING_OIL_TRANSPORT_UTILS_HEADERS}
         ${TESTING_OIL_TRANSPORT_HEADERS}
+        ${TESTING_OIL_TRANSPORT_MODELS_HYDRO_HEADERS}
     )
     target_link_libraries(testing_oiltransport graph_solvers::graph_solvers GTest::gtest)
     target_include_directories(testing_oiltransport
         PRIVATE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/testing/test_oilnet>
     )
-
+    list(APPEND TEST_EXECUTABLES testing_oiltransport)
     install(TARGETS testing_oiltransport DESTINATION bin)
 
-    if(GRAPH_SOLVERS_BUILD_CHEMDAE)
-        add_executable(testing_chemdae
-            ${TESTING_CHEMDAE_SOURCE}
-            ${TESTING_CHEMDAE_HEADERS}
-        )
-        target_link_libraries(testing_chemdae graph_solvers::graph_solvers vle_solvers::vle_solvers GTest::gtest)
-        target_include_directories(testing_chemdae
-            PRIVATE
-            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/testing/test_chemdae>
-        )
-        install(TARGETS testing_chemdae DESTINATION bin)
-    endif()
 
     add_executable(research_oiltransport 
         ${RESEARCH_OIL_TRANSPORT_HEADERS} 
@@ -463,6 +450,15 @@ if(GRAPH_SOLVERS_BUILD_TESTS)
         PRIVATE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/testing/research_oilnet>
     )
+    list(APPEND TEST_EXECUTABLES research_oiltransport)
+
+    # Поддержка bigobj для Clang
+    if((CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU") AND WIN32)
+        foreach(tgt IN LISTS TEST_EXECUTABLES)
+            target_compile_options(${tgt} PRIVATE -mcmodel=large)
+            target_link_options(${tgt} PRIVATE -mcmodel=large)
+        endforeach()
+    endif()
     install(TARGETS research_oiltransport DESTINATION bin)
 
 endif()
@@ -515,7 +511,7 @@ if(GRAPH_SOLVERS_BUILD_ADAPTER)
         DESTINATION ${CMAKE_INSTALL_LIBDIR}
     )
     
-    # Автоматическое копирование библиотеки в netadapter/bin после сборки
+    # Автоматическое копирование библиотеки в netadapter/bin/tmp после сборки
     # Библиотека будет подтянута в тесты через PreBuild event в Tests.csproj
     if(WIN32)
         set(ADAPTER_LIB_NAME "GraphSolversAdapter.dll")
@@ -524,12 +520,22 @@ if(GRAPH_SOLVERS_BUILD_ADAPTER)
     endif()
     add_custom_command(TARGET graph_solvers_adapter POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E make_directory 
+            "${CMAKE_CURRENT_SOURCE_DIR}/netadapter/bin/tmp"
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "$<TARGET_FILE:graph_solvers_adapter>"
+            "${CMAKE_CURRENT_SOURCE_DIR}/netadapter/bin/tmp/${ADAPTER_LIB_NAME}"
+        COMMENT "Copy GraphSolversAdapter library to netadapter/bin/tmp"
+    )
+
+    add_custom_command(TARGET graph_solvers_adapter POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E make_directory 
             "${CMAKE_CURRENT_SOURCE_DIR}/netadapter/bin"
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
             "$<TARGET_FILE:graph_solvers_adapter>"
             "${CMAKE_CURRENT_SOURCE_DIR}/netadapter/bin/${ADAPTER_LIB_NAME}"
         COMMENT "Copy GraphSolversAdapter library to netadapter/bin"
     )
+
     
 endif()
 

@@ -6,6 +6,27 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!-- Определение констант компиляции на основе доступной библиотеки -->
+  <!-- Логика: приоритет DLL, если нет - используем SO -->
+  <!-- На Windows: .so файлы от MinGW/Clang будут переименованы в .dll при копировании -->
+  <PropertyGroup>
+    <AdapterDllPath>$(MSBuildThisFileDirectory)..\bin\tmp\GraphSolversAdapter.dll</AdapterDllPath>
+    <AdapterSoPath>$(MSBuildThisFileDirectory)..\bin\tmp\libGraphSolversAdapter.so</AdapterSoPath>
+  </PropertyGroup>
+  
+  <!-- USE_DLL_LIBRARY: если есть DLL (приоритет) или есть SO на Windows (будет скопирован как DLL) -->
+  <PropertyGroup Condition="Exists('$(AdapterDllPath)')">
+    <DefineConstants>$(DefineConstants);USE_DLL_LIBRARY</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="!Exists('$(AdapterDllPath)') AND Exists('$(AdapterSoPath)') AND '$(OS)' == 'Windows_NT'">
+    <DefineConstants>$(DefineConstants);USE_DLL_LIBRARY</DefineConstants>
+  </PropertyGroup>
+  
+  <!-- USE_SO_LIBRARY: если нет DLL, но есть SO на Linux -->
+  <PropertyGroup Condition="!Exists('$(AdapterDllPath)') AND Exists('$(AdapterSoPath)') AND '$(OS)' != 'Windows_NT'">
+    <DefineConstants>$(DefineConstants);USE_SO_LIBRARY</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>

@@ -1,6 +1,6 @@
 #include "test_oilnet.h"
 
-TEST(settings_parser_json, ParsesAllSettingsFromJson) {
+TEST(SettingsParserJson, ParsesAllSettingsFromJson) {
     using namespace oil_transport;
 
     std::string settings_json_str = R"({
@@ -29,8 +29,7 @@ TEST(settings_parser_json, ParsesAllSettingsFromJson) {
           "max_iterations": 200,
           "line_search_max_iterations": 150,
           "line_search_function_decrement_factor": 5.0,
-          "argument_increment_norm_tolerance": 1e-5,
-          "residuals_norm_tolerance": 1e-7
+          "argument_increment_norm_tolerance": 1e-5
         }
       }
     })";
@@ -57,6 +56,5 @@ TEST(settings_parser_json, ParsesAllSettingsFromJson) {
     ASSERT_EQ(settings.structured_hydro_solver.nodal_solver.line_search_max_iterations, 150);
     ASSERT_EQ(settings.structured_hydro_solver.nodal_solver.line_search_function_decrement_factor, 5.0);
     ASSERT_EQ(settings.structured_hydro_solver.nodal_solver.argument_increment_norm_tolerance, 1e-5);
-    ASSERT_EQ(settings.structured_hydro_solver.nodal_solver.residuals_norm_tolerance, 1e-7);
 }
 

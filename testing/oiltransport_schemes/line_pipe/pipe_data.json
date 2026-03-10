@@ -1,0 +1,82 @@
+{
+    "LU1.1.1": {
+        "X_start": 0,
+        "X_end": 10000,
+        "Diameter": 0.7
+    },
+    "LU1.1.2": {
+        "X_start": 10000,
+        "X_end": 20000,
+        "Diameter": 0.7
+    },
+    "LU1.1.3": {
+        "X_start": 20000,
+        "X_end": 30000,
+        "Diameter": 0.7
+    },
+    "LU1.1.4": {
+        "X_start": 30000,
+        "X_end": 40000,
+        "Diameter": 0.7
+    },
+    "LU1.1.5": {
+        "X_start": 40000,
+        "X_end": 50000,
+        "Diameter": 0.7
+    },
+    "LU1.1.6": {
+        "X_start": 50000,
+        "X_end": 55000,
+        "Diameter": 0.7
+    },
+    "LU1.2A": {
+        "X_start": 55000,
+        "X_end": 58000,
+        "Diameter": 0.7
+    },
+    "LU1.2B": {
+        "X_start": 55000,
+        "X_end": 58000,
+        "Diameter": 0.7
+    },
+    "LU1.3.1": {
+        "X_start": 58000,
+        "X_end": 68000,
+        "Diameter": 0.7
+    },
+    "LU1.3.2": {
+        "X_start": 68000,
+        "X_end": 78000,
+        "Diameter": 0.7
+    },
+    "LU1.3.3": {
+        "X_start": 78000,
+        "X_end": 88000,
+        "Diameter": 0.7
+    },
+    "LU1.3.4": {
+        "X_start": 88000,
+        "X_end": 95000,
+        "Diameter": 0.7
+    },
+    "LU1.4A": {
+        "X_start": 95000,
+        "X_end": 98000,
+        "Diameter": 0.7
+    },
+    "LU1.4B": {
+        "X_start": 95000,
+        "X_end": 98000,
+        "Diameter": 0.7
+    },
+    "LU1.5.1": {
+        "X_start": 98000,
+        "X_end": 108000,
+        "Diameter": 0.7
+    },
+    "LU1.5.2": {
+        "X_start": 108000,
+        "X_end": 110000,
+        "Diameter": 0.7
+    }
+}

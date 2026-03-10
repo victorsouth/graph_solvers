@@ -66,3 +66,4 @@ TEST(GraphBuilder, HandlesHydroOnly) {
     ASSERT_EQ(model_type_info, expected);
 }
 
+

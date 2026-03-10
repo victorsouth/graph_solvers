@@ -1,0 +1,32 @@
+{
+    "NPS_BV_1": {
+        "is_initially_closed_static": true,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_P1_BV": {
+        "is_initially_closed_static": true,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+	"NPS_P2_BV": {
+        "is_initially_closed_static": false,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+	"NPS_P3_BV": {
+        "is_initially_closed_static": false,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+	"NPS_P4_BV": {
+        "is_initially_closed_static": false,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    },
+	"NPS_BV_2": {
+        "is_initially_closed_static": false,
+        "hydraulic_resistance": 0.03,
+        "diameter": 0.2
+    }
+}

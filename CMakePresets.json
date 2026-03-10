@@ -11,7 +11,7 @@
                 "CMAKE_INSTALL_PREFIX": "C:/Program Files (x86)/graph_solvers",
                 "CMAKE_C_COMPILER": "C:/mingw64/bin/gcc.exe",
                 "CMAKE_CXX_COMPILER": "C:/mingw64/bin/g++.exe",
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_EXPORT_COMPILE_COMMANDS" : "ON",
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_PREFIX_PATH": "C:/Program Files (x86)/googletest-distribution;C:/Program Files (x86)/Boost",
                 "GRAPH_SOLVERS_BUILD_ADAPTER": "ON"
@@ -30,20 +30,7 @@
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_CXX_FLAGS": "-w -Wno-#pragma-messages",
-                "CMAKE_PREFIX_PATH": "C:/Program Files (x86)/googletest-distribution;C:/Program Files (x86)/Boost"
-            }
-        },
-        {
-            "name": "Clang 16.0.0 arm64-apple-darwin24.3.0",
-            "displayName": "Clang 16.0.0 arm64-apple-darwin24.3.0",
-            "description": "Использование компиляторов: C = /usr/bin/clang, CXX = /usr/bin/clang++",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/clang",
-                "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
-                "CMAKE_BUILD_TYPE": "Debug",
-                "GRAPH_SOLVERS_BUILD_CHEMDAE": "ON"
+                "CMAKE_PREFIX_PATH": "C:/install/googletest/clang;C:/Program Files (x86)/Boost"
             }
         }
     ],
@@ -56,11 +43,6 @@
         {
             "name": "Clang 21.1.7 x86_64-w64-windows-gnu (ucrt64)",
             "configurePreset": "Clang 21.1.7 x86_64-w64-windows-gnu (ucrt64)",
-            "jobs": 8
-        },
-        {
-            "name": "Clang 16.0.0 arm64-apple-darwin24.3.0",
-            "configurePreset": "Clang 16.0.0 arm64-apple-darwin24.3.0",
             "jobs": 8
         }
     ]

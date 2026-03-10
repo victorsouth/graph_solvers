@@ -1,0 +1,124 @@
+{
+    "Src": {
+        "to": 0
+    },
+    "Snk": {
+        "from": 23
+    },
+    "NPS_V1": {
+        "from": 0,
+        "to": 3
+    },
+    "NPS_F": {
+        "from": 3,
+        "to": 4
+    },
+    "NPS_V2": {
+        "from": 0,
+        "to": 1
+    },
+    "NPS_BV_1": {
+        "from": 1,
+        "to": 2
+    },
+    "NPS_V3": {
+        "from": 2,
+        "to": 23
+    },
+    "NPS_P1_V1": {
+        "from": 4,
+        "to": 5
+    },
+    "NPS_P1": {
+        "from": 5,
+        "to": 6
+    },
+    "NPS_P1_V2": {
+        "from": 6,
+        "to": 7
+    },
+    "NPS_P1_BV": {
+        "from": 4,
+        "to": 7
+    },
+    "NPS_P2_V1": {
+        "from": 7,
+        "to": 8
+    },
+    "NPS_P2": {
+        "from": 8,
+        "to": 9
+    },
+    "NPS_P2_V2": {
+        "from": 9,
+        "to": 10
+    },
+    "NPS_P2_BV": {
+        "from": 7,
+        "to": 10
+    },
+    "NPS_P3_V1": {
+        "from": 10,
+        "to": 11
+    },
+    "NPS_P3": {
+        "from": 11,
+        "to": 12
+    },
+    "NPS_P3_V2": {
+        "from": 12,
+        "to": 13
+    },
+    "NPS_P3_BV": {
+        "from": 10,
+        "to": 13
+    },
+    "NPS_P4_V1": {
+        "from": 13,
+        "to": 14
+    },
+    "NPS_P4": {
+        "from": 14,
+        "to": 15
+    },
+    "NPS_P4_V2": {
+        "from": 15,
+        "to": 16
+    },
+    "NPS_P4_BV": {
+        "from": 13,
+        "to": 16
+    },
+    "NPS_BV_2": {
+        "from": 16,
+        "to": 17
+    },
+    "NPS_RD1_V1": {
+        "from": 17,
+        "to": 18
+    },
+    "NPS_RD1": {
+        "from": 18,
+        "to": 19
+    },
+    "NPS_RD1_V2": {
+        "from": 19,
+        "to": 22
+    },
+    "NPS_RD2_V1": {
+        "from": 17,
+        "to": 20
+    },
+    "NPS_RD2": {
+        "from": 20,
+        "to": 21
+    },
+    "NPS_RD2_V2": {
+        "from": 21,
+        "to": 22
+    },
+    "NPS_V4": {
+        "from": 22,
+        "to": 23
+    }
+}

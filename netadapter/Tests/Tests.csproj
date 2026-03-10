@@ -18,21 +18,48 @@
     <ProjectReference Include="..\GraphSolversNet\GraphSolversNet.csproj" />
   </ItemGroup>
 
-  <!-- PreBuild event: копирование DLL из netadapter/bin в папку тестов -->
+  <!-- PreBuild event: копирование библиотеки адаптера из netadapter/bin/tmp в папку тестов -->
   <Target Name="CopyAdapterDll" BeforeTargets="BeforeBuild">
     <PropertyGroup>
-      <AdapterDllSource>$(MSBuildThisFileDirectory)..\bin\GraphSolversAdapter.dll</AdapterDllSource>
-      <AdapterDllDestination>$(OutputPath)GraphSolversAdapter.dll</AdapterDllDestination>
+      <!-- Проверяем наличие библиотек: сначала .dll, потом .so -->
+      <AdapterDllPath>$(MSBuildThisFileDirectory)..\bin\tmp\GraphSolversAdapter.dll</AdapterDllPath>
+      <AdapterSoPath>$(MSBuildThisFileDirectory)..\bin\tmp\libGraphSolversAdapter.so</AdapterSoPath>
     </PropertyGroup>
     
-    <Message Text="Копирование GraphSolversAdapter.dll из $(AdapterDllSource) в $(AdapterDllDestination)" Importance="normal" />
+    <!-- Определяем, какую библиотеку использовать: приоритет DLL, если нет - используем SO -->
+    <!-- Если есть DLL - используем его независимо от ОС -->
+    <PropertyGroup Condition="Exists('$(AdapterDllPath)')">
+      <AdapterLibName>GraphSolversAdapter.dll</AdapterLibName>
+      <AdapterDllSource>$(AdapterDllPath)</AdapterDllSource>
+    </PropertyGroup>
+    <!-- Если нет DLL, но есть SO: проверка ОС обязательна для определения имени при копировании -->
+    <!-- На Windows: .so файлы от MinGW/Clang копируются как .dll (т.к. .NET на Windows не загружает .so) -->
+    <!-- На Linux: копируем как .so -->
+    <PropertyGroup Condition="!Exists('$(AdapterDllPath)') AND Exists('$(AdapterSoPath)') AND '$(OS)' == 'Windows_NT'">
+      <AdapterLibName>GraphSolversAdapter.dll</AdapterLibName>
+      <AdapterDllSource>$(AdapterSoPath)</AdapterDllSource>
+    </PropertyGroup>
+    <PropertyGroup Condition="!Exists('$(AdapterDllPath)') AND Exists('$(AdapterSoPath)') AND '$(OS)' != 'Windows_NT'">
+      <AdapterLibName>libGraphSolversAdapter.so</AdapterLibName>
+      <AdapterDllSource>$(AdapterSoPath)</AdapterDllSource>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+      <AdapterDllDestination>$(OutputPath)$(AdapterLibName)</AdapterDllDestination>
+    </PropertyGroup>
+    
+    <!-- Копируем библиотеку, если она найдена -->
+    <Message Text="Копирование $(AdapterLibName) из $(AdapterDllSource) в $(AdapterDllDestination)" Importance="normal" 
+             Condition="'$(AdapterLibName)' != ''" />
     <Copy 
       SourceFiles="$(AdapterDllSource)" 
       DestinationFiles="$(AdapterDllDestination)"
       SkipUnchangedFiles="true"
-      Condition="Exists('$(AdapterDllSource)')" />
-    <Warning Text="GraphSolversAdapter.dll не найден по пути: $(AdapterDllSource). Убедитесь, что адаптер собран через CMake с опцией GRAPH_SOLVERS_BUILD_ADAPTER=ON." 
-             Condition="!Exists('$(AdapterDllSource)')" />
+      Condition="'$(AdapterLibName)' != ''" />
+    
+    <!-- Ошибка, если ни одна библиотека не найдена -->
+    <Error Text="Библиотека адаптера не найдена ни в одном из вариантов:&#xA;  - $(AdapterDllPath)&#xA;  - $(AdapterSoPath)&#xA;Убедитесь, что адаптер собран через CMake с опцией GRAPH_SOLVERS_BUILD_ADAPTER=ON." 
+           Condition="'$(AdapterLibName)' == ''" />
   </Target>
 
 </Project>

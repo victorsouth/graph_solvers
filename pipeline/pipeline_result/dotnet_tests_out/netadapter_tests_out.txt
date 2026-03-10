@@ -1,0 +1,28 @@
+  Determining projects to restore...
+  Restored /builds/solvers/graph_solvers/netadapter/GraphSolversNet/GraphSolversNet.csproj (in 2.24 sec).
+  Restored /builds/solvers/graph_solvers/netadapter/Tests/Tests.csproj (in 4.65 sec).
+  GraphSolversNet -> /builds/solvers/graph_solvers/netadapter/GraphSolversNet/bin/Release/net8.0/GraphSolversNet.dll
+  Tests -> /builds/solvers/graph_solvers/netadapter/Tests/bin/Release/net8.0/Tests.dll
+Test run for /builds/solvers/graph_solvers/netadapter/Tests/bin/Release/net8.0/Tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+NUnit Adapter 4.5.0.0: Test execution started
+Running all tests in /builds/solvers/graph_solvers/netadapter/Tests/bin/Release/net8.0/Tests.dll
+   NUnit3TestExecutor discovered 8 of 8 NUnit test cases using Current Discovery mode, Non-Explicit run
+NUnit Adapter 4.5.0.0: Test execution complete
+  Passed CreateModel_ShouldReturnNonZeroHandle [17 ms]
+  Passed DeleteModel_ShouldNotThrow [3 ms]
+  Passed DeleteModel_WithZeroHandle_ShouldNotThrow [< 1 ms]
+  Passed GetState_WithValidModel_ShouldReturnString [1 ms]
+  Passed Init_WithNullModel_ShouldReturnError [2 ms]
+  Passed Init_WithSimpleScheme_ShouldSucceed [< 1 ms]
+  Passed HydroTransportTask_StepWithFlowPropagation_ShouldSucceed [53 ms]
+  Passed HydroTransportTask_Utf8StringInScheme_IsPreservedInResult [121 ms]
+Results File: /builds/solvers/graph_solvers/pipeline/pipeline_scripts/../pipeline_result/dotnet_tests_out/netadapter_tests_out.xml
+
+Test Run Successful.
+Total tests: 8
+     Passed: 8
+ Total time: 1.0209 Seconds

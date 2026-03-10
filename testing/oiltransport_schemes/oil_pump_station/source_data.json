@@ -1,0 +1,9 @@
+{
+    "Src": {
+		"std_volflow": 0.1,
+        "density": 800
+    },
+    "Snk": {
+        "pressure": 20e5
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "PNS1_P2": {
+        "head_characteristic": [250.739, -0.013956, -2.1523e-6, -2.6927e-10],
+        "head_characteristic_alternative": [303.703928, -0.03989472, 0, 0],
+        "switching_volumetric_flow_for_head_characteristic": 10.0,
+        "efficiency_characteristic": [0.0076669, 0.00070543, -1.8266e-7, 1.3355e-11],
+        "initial_frequency": 1.0,
+        "nominal_frequency": 3000.0,
+        "rotor_wheel_reducing": 0.0,
+        "is_initially_started": true
+    },
+    "PNS1_P3": {
+        "head_characteristic": [250.739, -0.013956, -2.1523e-6, -2.6927e-10],
+        "head_characteristic_alternative": [303.703928, -0.03989472, 0, 0],
+        "switching_volumetric_flow_for_head_characteristic": 1.0,
+        "efficiency_characteristic": [0.0076669, 0.00070543, -1.8266e-7, 1.3355e-11],
+        "initial_frequency": 1.0,
+        "nominal_frequency": 3000.0,
+        "rotor_wheel_reducing": 0.0,
+        "is_initially_started": true
+    },
+    "PNS1_P4": {
+        "head_characteristic": [250.739, -0.013956, -2.1523e-6, -2.6927e-10],
+        "head_characteristic_alternative": [303.703928, -0.03989472, 0, 0],
+        "switching_volumetric_flow_for_head_characteristic": 1.0,
+        "efficiency_characteristic": [0.0076669, 0.00070543, -1.8266e-7, 1.3355e-11],
+        "initial_frequency": 1.0,
+        "nominal_frequency": 3000.0,
+        "rotor_wheel_reducing": 0.0,
+        "is_initially_started": false
+    },
+    "MNS1_P1": {
+        "head_characteristic": [250.739, -0.013956, -2.1523e-6, -2.6927e-10],
+        "head_characteristic_alternative": [303.703928, -0.03989472, 0, 0],
+        "switching_volumetric_flow_for_head_characteristic": 10.0,
+        "efficiency_characteristic": [0.0076669, 0.00070543, -1.8266e-7, 1.3355e-11],
+        "initial_frequency": 1.0,
+        "nominal_frequency": 3000.0,
+        "rotor_wheel_reducing": 0.0,
+        "is_initially_started": true
+    },
+    "MNS1_P2": {
+        "head_characteristic": [250.739, -0.013956, -2.1523e-6, -2.6927e-10],
+        "head_characteristic_alternative": [303.703928, -0.03989472, 0, 0],
+        "switching_volumetric_flow_for_head_characteristic": 1.0,
+        "efficiency_characteristic": [0.0076669, 0.00070543, -1.8266e-7, 1.3355e-11],
+        "initial_frequency": 1.0,
+        "nominal_frequency": 3000.0,
+        "rotor_wheel_reducing": 0.0,
+        "is_initially_started": false
+    },
+    "MNS1_P3": {
+        "head_characteristic": [250.739, -0.013956, -2.1523e-6, -2.6927e-10],
+        "head_characteristic_alternative": [303.703928, -0.03989472, 0, 0],
+        "switching_volumetric_flow_for_head_characteristic": 1.0,
+        "efficiency_characteristic": [0.0076669, 0.00070543, -1.8266e-7, 1.3355e-11],
+        "initial_frequency": 1.0,
+        "nominal_frequency": 3000.0,
+        "rotor_wheel_reducing": 0.0,
+        "is_initially_started": false
+    },
+    "MNS1_P4": {
+        "head_characteristic": [250.739, -0.013956, -2.1523e-6, -2.6927e-10],
+        "head_characteristic_alternative": [303.703928, -0.03989472, 0, 0],
+        "switching_volumetric_flow_for_head_characteristic": 1.0,
+        "efficiency_characteristic": [0.0076669, 0.00070543, -1.8266e-7, 1.3355e-11],
+        "initial_frequency": 1.0,
+        "nominal_frequency": 3000.0,
+        "rotor_wheel_reducing": 0.0,
+        "is_initially_started": false
+    }
+}

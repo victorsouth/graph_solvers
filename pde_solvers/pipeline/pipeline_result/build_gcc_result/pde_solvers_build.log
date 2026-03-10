@@ -1,0 +1,74 @@
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Boost: /usr/lib/cmake/Boost-1.84.0/BoostConfig.cmake (found version "1.84.0") found components: headers 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found GTest: /usr/local/lib/cmake/GTest/GTestConfig.cmake (found version "1.16.0")  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /builds/solvers/graph_solvers/pde_solvers/build
+[  0%] Built target pde_solvers
+[ 25%] Building CXX object CMakeFiles/pde_tests.dir/testing/test_main.cpp.o
+[ 50%] Building CXX object CMakeFiles/pde_research.dir/research/research_main.cpp.o
+[ 75%] Linking CXX executable pde_tests
+[ 75%] Built target pde_tests
+[100%] Linking CXX executable pde_research
+[100%] Built target pde_research
+-- Install configuration: "Release"
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/lib/cmake/pde_solvers/pde_solversTargets.cmake
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/lib/cmake/pde_solvers/pde_solversConfig.cmake
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pde_solvers.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/timeseries.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/physical_constants.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/core/differential_equation.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/core/profile_structures.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/core/ring_buffer.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/oil.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_advection_solver.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_hydraulic_pde.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/iso_nonbaro_impulse_pde.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_advection_pde.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_hydraulic_computations.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_hydraulic_struct.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_profile_utils.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/heat_transfer.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_dynamic_soil_multizone.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_heat_computations.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_heat_pde.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_heat_struct.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_heat_util.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/pipe/pipe_dynamic_soil.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/solvers/diffusion_solver.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/solvers/godunov_solver.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/solvers/moc_solver.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/solvers/ode_solver.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/solvers/quick_solver.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/timeseries/csv_readers.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/timeseries/csv_helpers.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/timeseries/timeseries_helpers.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/timeseries/vector_timeseries.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/timeseries/synthetic_timeseries.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/advection_task.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/endogenous_values.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/iso_nonbarotropic_pipe_task.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/isothermal_quasistatic_ident.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/isothermal_quasistatic_task.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/nonisothermal_quasistatic_ident.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/nonisothermal_quasistatic_task.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/nonisothermal_quasistatic_task_p.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/pipe_heat_task_util.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/pipe_solver_confident_advection.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/include/pde_solvers/tasks/pipe_solver_interface.h
+-- Installing: /builds/solvers/graph_solvers/pde_solvers/Libs/GCC/bin/pde_tests

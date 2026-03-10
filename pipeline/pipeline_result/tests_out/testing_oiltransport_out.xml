@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="81" failures="0" disabled="3" errors="0" time="6.387" timestamp="2026-03-10T16:42:02.497" name="AllTests">
+  <testsuite name="GGASolver" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:02.497">
+    <testcase name="Test1" file="/builds/solvers/graph_solvers/testing/test_oilnet/TestGGA.cpp" line="4" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.497" classname="GGASolver" />
+  </testsuite>
+  <testsuite name="GraphBuilder" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:02.497">
+    <testcase name="HandlesHydroTransport" file="/builds/solvers/graph_solvers/testing/test_oilnet/TestGraphBuilder.h" line="5" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.497" classname="GraphBuilder" />
+    <testcase name="HandlesTransportOnly" file="/builds/solvers/graph_solvers/testing/test_oilnet/TestGraphBuilder.h" line="31" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.497" classname="GraphBuilder" />
+    <testcase name="HandlesHydroOnly" file="/builds/solvers/graph_solvers/testing/test_oilnet/TestGraphBuilder.h" line="51" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.497" classname="GraphBuilder" />
+  </testsuite>
+  <testsuite name="NodalSolver" tests="11" failures="0" disabled="1" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:02.498">
+    <testcase name="Handles2Edges" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolver.h" line="40" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="NodalSolver" />
+    <testcase name="HasJacobianCorrectDimensions" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolver.h" line="78" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="NodalSolver" />
+    <testcase name="HasJacobianCorrectSparsityPattern" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolver.h" line="104" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="NodalSolver" />
+    <testcase name="HasNonSingularJacobian" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolver.h" line="147" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="NodalSolver" />
+    <testcase name="HasContinuousJacobian" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolver.h" line="171" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="NodalSolver" />
+    <testcase name="HasWellConditionedFinalJacobian" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolver.h" line="204" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="NodalSolver" />
+    <testcase name="HandlesJacobianAtZeroPressure" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolver.h" line="231" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="NodalSolver" />
+    <testcase name="MatchesNumericalJacobian" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolver.h" line="293" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="NodalSolver" />
+    <testcase name="EstimatesInitialPressuresAroundGivenPressure" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolver.h" line="488" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="NodalSolver" />
+    <testcase name="ExtractsKnownPressuresForNontrivialNodesOrder" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolver.h" line="520" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="NodalSolver" />
+    <testcase name="DISABLED_DevelopQuasistatic" file="/builds/solvers/graph_solvers/testing/test_oilnet/TestHydro.h" line="235" status="notrun" result="suppressed" time="0." timestamp="1970-01-01T00:00:00.000" classname="NodalSolver" />
+  </testsuite>
+  <testsuite name="Mixer" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:02.498">
+    <testcase name="IsCalculationOfMixtureBasedOnFormulas" file="/builds/solvers/graph_solvers/testing/test_oilnet/TestMixer.h" line="8" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="Mixer" />
+  </testsuite>
+  <testsuite name="BlockSolverConfidence" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="5.546" timestamp="2026-03-10T16:42:02.498">
+    <testcase name="HandlesTailInconfidence" file="/builds/solvers/graph_solvers/testing/test_oilnet/BlockPropagationSolver/BlockPropConfidence.h" line="4" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="BlockSolverConfidence" />
+    <testcase name="HandlesDynamicConfidence" file="/builds/solvers/graph_solvers/testing/test_oilnet/BlockPropagationSolver/BlockPropConfidence.h" line="128" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:02.498" classname="BlockSolverConfidence" />
+    <testcase name="HandlesDynamicConfidence_HotTU1" file="/builds/solvers/graph_solvers/testing/test_oilnet/BlockPropagationSolver/BlockPropConfidence.h" line="170" status="run" result="completed" time="5.545" timestamp="2026-03-10T16:42:02.499" classname="BlockSolverConfidence" />
+  </testsuite>
+  <testsuite name="BlockEndogenousSolver" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.045">
+    <testcase name="HandlesOrientedMeasurementsOnBridges" file="/builds/solvers/graph_solvers/testing/test_oilnet/BlockPropagationSolver/BlockPropEndogenous.h" line="3" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.045" classname="BlockEndogenousSolver" />
+  </testsuite>
+  <testsuite name="FullPropagatableSolverConfidence" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.045">
+    <testcase name="HandlesTailInconfidence" file="/builds/solvers/graph_solvers/testing/test_oilnet/GraphPropagationSolver/FullPropConfidence.h" line="4" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.045" classname="FullPropagatableSolverConfidence" />
+  </testsuite>
+  <testsuite name="FullPropagatableSolverEndogenous" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.045">
+    <testcase name="HandlesSchemeWithMixing" file="/builds/solvers/graph_solvers/testing/test_oilnet/GraphPropagationSolver/FullPropEndogenous.h" line="6" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.045" classname="FullPropagatableSolverEndogenous" />
+    <testcase name="HandlesModelsWithHydroTransportBuffers" file="/builds/solvers/graph_solvers/testing/test_oilnet/GraphPropagationSolver/FullPropEndogenous.h" line="67" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.046" classname="FullPropagatableSolverEndogenous" />
+  </testsuite>
+  <testsuite name="FullPropagatableSolverFlow" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.046">
+    <testcase name="HandlesSufficientMeasurements" file="/builds/solvers/graph_solvers/testing/test_oilnet/GraphPropagationSolver/FullPropFlow.h" line="6" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.046" classname="FullPropagatableSolverFlow" />
+  </testsuite>
+  <testsuite name="NodalSolverBufferBased" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.046">
+    <testcase name="EstimatesFromBuffer" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolverBufferBase.h" line="77" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.046" classname="NodalSolverBufferBased" />
+    <testcase name="UpdatesModelBuffers" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolverBufferBase.h" line="118" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.046" classname="NodalSolverBufferBased" />
+  </testsuite>
+  <testsuite name="GraphRenumbering" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.047">
+    <testcase name="HandlesNoRenumbering" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolverRenumbering.h" line="25" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.047" classname="GraphRenumbering" />
+    <testcase name="RenumbersNodes" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolverRenumbering.h" line="68" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.047" classname="GraphRenumbering" />
+    <testcase name="RenumbersEdges1" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolverRenumbering.h" line="110" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.047" classname="GraphRenumbering" />
+    <testcase name="RenumbersNodesAndEdges1" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolverRenumbering.h" line="151" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.047" classname="GraphRenumbering" />
+    <testcase name="MapsOldPlaces" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolverRenumbering.h" line="192" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.047" classname="GraphRenumbering" />
+    <testcase name="RenumbersResults" file="/builds/solvers/graph_solvers/testing/test_oilnet/NodalSolver/TestNodalSolverRenumbering.h" line="233" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.047" classname="GraphRenumbering" />
+  </testsuite>
+  <testsuite name="CustomSolver" tests="1" failures="0" disabled="1" skipped="0" errors="0" time="0." timestamp="1970-01-01T00:00:00.000">
+    <testcase name="DISABLED_Develop" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/CustomPipeSolver.h" line="4" status="notrun" result="suppressed" time="0." timestamp="1970-01-01T00:00:00.000" classname="CustomSolver" />
+  </testsuite>
+  <testsuite name="MeasurementCompleteness" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.047">
+    <testcase name="HandlesSourceSwitching" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/MeasurementsCompleteness.h" line="7" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.047" classname="MeasurementCompleteness" />
+    <testcase name="HandlesValveSwitching" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/MeasurementsCompleteness.h" line="61" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.047" classname="MeasurementCompleteness" />
+  </testsuite>
+  <testsuite name="TimeGridGenerator" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.048">
+    <testcase name="InitialStateHeuristicUsage" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/TaskControlsHandling.h" line="7" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.048" classname="TimeGridGenerator" />
+  </testsuite>
+  <testsuite name="TaskWithMeasurementsAndControls" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-03-10T16:42:08.048">
+    <testcase name="ConvertsControlsAccordingToType" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/TaskControlsHandling.h" line="56" status="run" result="completed" time="0.001" timestamp="2026-03-10T16:42:08.048" classname="TaskWithMeasurementsAndControls" />
+  </testsuite>
+  <testsuite name="BatchTransportWithControls" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.014" timestamp="2026-03-10T16:42:08.050">
+    <testcase name="AppliesControlsFromCsvToObjects" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/TaskControlsHandling.h" line="91" status="run" result="completed" time="0.014" timestamp="2026-03-10T16:42:08.050" classname="BatchTransportWithControls" />
+  </testsuite>
+  <testsuite name="BatchHydroTransportWithControls" tests="1" failures="0" disabled="1" skipped="0" errors="0" time="0." timestamp="1970-01-01T00:00:00.000">
+    <testcase name="DISABLED_AppliesControlsFromCsvToObjects" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/TaskControlsHandling.h" line="134" status="notrun" result="suppressed" time="0." timestamp="1970-01-01T00:00:00.000" classname="BatchHydroTransportWithControls" />
+  </testsuite>
+  <testsuite name="GraphParser" tests="7" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-03-10T16:42:08.065">
+    <testcase name="ParsesControlTagsForEdges2" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestGraphParser.h" line="68" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.065" classname="GraphParser" />
+    <testcase name="ParsesFromStringSimpleScheme" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestGraphParser.h" line="92" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.065" classname="GraphParser" />
+    <testcase name="ParsesAllPumpFieldsFromJson" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestGraphParser.h" line="168" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.065" classname="GraphParser" />
+    <testcase name="ParsesAllSourceFieldsFromJson" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestGraphParser.h" line="197" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.065" classname="GraphParser" />
+    <testcase name="ParsesAllValveFieldsFromJson" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestGraphParser.h" line="223" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.066" classname="GraphParser" />
+    <testcase name="ParsesAllLumpedFieldsFromJson" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestGraphParser.h" line="247" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.066" classname="GraphParser" />
+    <testcase name="ParsesAllCheckValveFieldsFromJson" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestGraphParser.h" line="269" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.066" classname="GraphParser" />
+  </testsuite>
+  <testsuite name="ChainSchemeGenerator" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.066">
+    <testcase name="CreatesSchemeFromPassedData" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestGraphParser.h" line="296" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.066" classname="ChainSchemeGenerator" />
+  </testsuite>
+  <testsuite name="ResultSerialization" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.042" timestamp="2026-03-10T16:42:08.066">
+    <testcase name="HandlesMultipleLayersWithRegimeSelectionStrategy" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestResultSerialization.h" line="4" status="run" result="completed" time="0.042" timestamp="2026-03-10T16:42:08.066" classname="ResultSerialization" />
+  </testsuite>
+  <testsuite name="TaskMeasuresHandling" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.109">
+    <testcase name="RoutesSidedEndognous" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/TaskMeasuresHandling.h" line="5" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.109" classname="TaskMeasuresHandling" />
+    <testcase name="ThrowsExceptionIfNoFlowsPassed" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/TaskMeasuresHandling.h" line="45" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.110" classname="TaskMeasuresHandling" />
+  </testsuite>
+  <testsuite name="MeasurementsAverager" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.110">
+    <testcase name="ComputesAveragesBetweenInputs" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/MeasurementsFuncs.h" line="12" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.110" classname="MeasurementsAverager" />
+  </testsuite>
+  <testsuite name="HydroTransportTask" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0.026" timestamp="2026-03-10T16:42:08.110">
+    <testcase name="SolveWritesToBuffers" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTransportTask.h" line="22" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.110" classname="HydroTransportTask" />
+    <testcase name="StepWithFlowPropagation" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTransportTask.h" line="53" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.110" classname="HydroTransportTask" />
+    <testcase name="StepWithFlowPropagation_PipeUseCase" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTransportTask.h" line="83" status="run" result="completed" time="0.015" timestamp="2026-03-10T16:42:08.111" classname="HydroTransportTask" />
+    <testcase name="StepWithFlowCalculation" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTransportTask.h" line="124" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.127" classname="HydroTransportTask" />
+    <testcase name="StepWithFlowCalculation_PipeUseCase" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTransportTask.h" line="159" status="run" result="completed" time="0.009" timestamp="2026-03-10T16:42:08.127" classname="HydroTransportTask" />
+  </testsuite>
+  <testsuite name="DecomposedQuasistaticCalc" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.004" timestamp="2026-03-10T16:42:08.137">
+    <testcase name="HandlesSimpleScheme_WhenNoPipes" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="5" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.137" classname="DecomposedQuasistaticCalc" />
+    <testcase name="HandlesSimpleSchemeWithPipe" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="81" status="run" result="completed" time="0.003" timestamp="2026-03-10T16:42:08.137" classname="DecomposedQuasistaticCalc" />
+  </testsuite>
+  <testsuite name="HydroOnlyTask" tests="13" failures="0" disabled="0" skipped="0" errors="0" time="0.741" timestamp="2026-03-10T16:42:08.141">
+    <testcase name="ReturnsNodalSolverAnalysis_WhenMultipleSubgraphs" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="159" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.141" classname="HydroOnlyTask" />
+    <testcase name="ReturnsEmptyAnalysisAndNonEmptyFlowResult_WhenAnalysisModeNever" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="198" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.142" classname="HydroOnlyTask" />
+    <testcase name="FillsAnalysisOnlyIfNotConverged_WhenAnalysisModeIfFailed" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="240" status="run" result="completed" time="0.001" timestamp="2026-03-10T16:42:08.143" classname="HydroOnlyTask" />
+    <testcase name="HandlesTypicalMainPumpStation_WhenDisabledReserveLine_PP" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="289" status="run" result="completed" time="0.138" timestamp="2026-03-10T16:42:08.144" classname="HydroOnlyTask" />
+    <testcase name="HandlesTypicalMainPumpStation_WhenEnabledReserveLine_PP" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="328" status="run" result="completed" time="0.12" timestamp="2026-03-10T16:42:08.282" classname="HydroOnlyTask" />
+    <testcase name="HandlesTypicalMainPumpStation_WhenDisabledReserveLine_QP" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="383" status="run" result="completed" time="0.177" timestamp="2026-03-10T16:42:08.403" classname="HydroOnlyTask" />
+    <testcase name="HandlesTypicalMainPumpStation_WhenEnabledReserveLine_QP" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="418" status="run" result="completed" time="0.224" timestamp="2026-03-10T16:42:08.581" classname="HydroOnlyTask" />
+    <testcase name="HandlesTypicalLinearPart_WhenDisabledReserveLine_PP" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="469" status="run" result="completed" time="0.01" timestamp="2026-03-10T16:42:08.806" classname="HydroOnlyTask" />
+    <testcase name="HandlesTypicalLinearPart_WhenEnabledReserveLine_PP" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="499" status="run" result="completed" time="0.014" timestamp="2026-03-10T16:42:08.817" classname="HydroOnlyTask" />
+    <testcase name="HandlesTypicalLinearPart_WhenDisabledReserveLine_QP" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="542" status="run" result="completed" time="0.019" timestamp="2026-03-10T16:42:08.832" classname="HydroOnlyTask" />
+    <testcase name="HandlesTypicalLinearPart_WhenEnabledReserveLine_QP" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="567" status="run" result="completed" time="0.024" timestamp="2026-03-10T16:42:08.851" classname="HydroOnlyTask" />
+    <testcase name="HandlesTypicalOilPumpStation" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="605" status="run" result="completed" time="0.007" timestamp="2026-03-10T16:42:08.875" classname="HydroOnlyTask" />
+    <testcase name="HandlesChainScheme_WhenVertexIndicesAreNonSequential" file="/builds/solvers/graph_solvers/testing/test_oilnet/Task/HydroTask.h" line="630" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.883" classname="HydroOnlyTask" />
+  </testsuite>
+  <testsuite name="BoundsParser" tests="7" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.883">
+    <testcase name="HandlesEdgeMeasurementUnsided" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestBoundParserJson.h" line="4" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.883" classname="BoundsParser" />
+    <testcase name="HandlesEdgeMeasurementSided" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestBoundParserJson.h" line="37" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.883" classname="BoundsParser" />
+    <testcase name="HandlesVertexMeasurement" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestBoundParserJson.h" line="71" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.883" classname="BoundsParser" />
+    <testcase name="HandlesControlSource" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestBoundParserJson.h" line="103" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.883" classname="BoundsParser" />
+    <testcase name="HandlesControlValve" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestBoundParserJson.h" line="149" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.883" classname="BoundsParser" />
+    <testcase name="HandlesSingleLayer" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestBoundParserJson.h" line="188" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.883" classname="BoundsParser" />
+    <testcase name="HandlesMultipleLayers" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestBoundParserJson.h" line="253" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.883" classname="BoundsParser" />
+  </testsuite>
+  <testsuite name="SettingsParserJson" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.883">
+    <testcase name="ParsesAllSettingsFromJson" file="/builds/solvers/graph_solvers/testing/test_oilnet/Serialization/TestSettingsParser.h" line="3" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.883" classname="SettingsParserJson" />
+  </testsuite>
+  <testsuite name="IsoQsmPump" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.883">
+    <testcase name="CreatesHeadDifference_WhilePumpIsWorking" file="/builds/solvers/graph_solvers/testing/test_oilnet/ModelsHydro/Pump.h" line="33" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.883" classname="IsoQsmPump" />
+  </testsuite>
+  <testsuite name="LocalResistance" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:42:08.884">
+    <testcase name="DerivativeAtZeroflowIsDefined" file="/builds/solvers/graph_solvers/testing/test_oilnet/ModelsHydro/LocalResistance.h" line="5" status="run" result="completed" time="0." timestamp="2026-03-10T16:42:08.884" classname="LocalResistance" />
+  </testsuite>
+</testsuites>

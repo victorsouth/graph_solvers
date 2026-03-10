@@ -1,0 +1,118 @@
+-- Building for: Ninja
+-- The C compiler identification is Clang 20.1.0
+-- The CXX compiler identification is Clang 20.1.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/msys64/clang64/bin/cc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/msys64/clang64/bin/c++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CXX standart: 20
+-- Found Eigen3: C:/msys64/clang64/include/eigen3 (Required is at least version "2.91.0")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Found GTest: C:/msys64/clang64/lib/cmake/GTest/GTestConfig.cmake (found version "1.16.0")
+-- Configuring done (4.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/build
+[1/20] Building CXX object CMakeFiles/testing_graphs.dir/testing/test_graphs/test_graphs.cpp.obj
+[2/20] Building CXX object CMakeFiles/research_oiltransport.dir/testing/research_oilnet/research_oilnet.cpp.obj
+[3/20] Building CXX object CMakeFiles/testing_hydronet.dir/testing/test_hydronet/test_hydronet.cpp.obj
+[4/20] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/measurements/transport_measurements_funcs.cpp.obj
+[5/20] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/transport_task.cpp.obj
+[6/20] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/measurements/transport_measurements.cpp.obj
+[7/20] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/transport_mixer.cpp.obj
+[8/20] Building CXX object CMakeFiles/testing_oiltransport.dir/testing/test_oilnet/TestGGA.cpp.obj
+[9/20] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/measurements/graph_timeseries.cpp.obj
+[10/20] Building CXX object CMakeFiles/graph_solvers.dir/src/hydronet/redundant_flows_corrector.cpp.obj
+[11/20] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/serialization/graph_parser.cpp.obj
+[12/20] Linking CXX static library libgraph_solvers.a
+[13/20] Linking CXX executable testing_graphs.exe
+[14/20] Linking CXX executable testing_hydronet.exe
+[15/20] Building CXX object CMakeFiles/research_oiltransport.dir/testing/research_oilnet/2025-density.cpp.obj
+[16/20] Linking CXX executable research_oiltransport.exe
+[17/20] Building CXX object CMakeFiles/graph_solvers_adapter.dir/netadapter/GraphSolversAdapter/GraphSolversAdapter.cpp.obj
+[18/20] Linking CXX shared library libGraphSolversAdapter.dll
+[19/20] Building CXX object CMakeFiles/testing_oiltransport.dir/testing/test_oilnet/test_oilnet.cpp.obj
+[20/20] Linking CXX executable testing_oiltransport.exe
+-- Install configuration: "Release"
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/lib/libgraph_solvers.a
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/lib/cmake/graph_solvers/graph_solversTargets.cmake
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/lib/cmake/graph_solvers/graph_solversTargets-release.cmake
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/lib/cmake/graph_solvers/graph_solversConfig.cmake
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/basic_graph.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/general_structured_graph.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/graph_bicomps.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/graph_bicomps_algorithms.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/graph_bindings.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/graph_exception.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/graph_topology.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/mimo_graph.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/helpers/invertex_index.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/helpers/map_helpers.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/helpers/set_helpers.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/graphs/helpers/vector_helpers.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/helpers.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/redundant_flows_corrector.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/block_tree/endogenous_propagator.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/block_tree/flow_propagator.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/block_tree/transport_block_solver.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/flow_solvers/nodal_solver.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/flow_solvers/renumber_pressure_vertex.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/flow_solvers/nodal_solver_buffer_based.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/structured_solvers/structured_hydro_solver.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/structured_solvers/structured_transport_solver.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/full_propagatable_graph/endogenous_propagator.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/full_propagatable_graph/flow_propagator.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/full_propagatable_graph/transport_graph_solver.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/topology/topology.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/hydronet/topology/zeroflow.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/transport_buffer.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/transport_mixer.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/transport_task.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/hydro_transport_task.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/hydro_task.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/graph_builder.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/transport_batch_series.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/transport_batch_profiles.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/transport_ident.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/solvers_buffered_decorators/transport_graph_solver_buffered.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/solvers_buffered_decorators/transport_block_solver_buffered.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/measurements/graph_timeseries.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/measurements/transport_measurements.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/measurements/transport_measurements_funcs.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_transport/transport_lumped.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_transport/transport_model_interface.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_transport/transport_pipe.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_transport/transport_source.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/transport_topology/transport_topology.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/serialization/graph_parser.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/serialization/json_model_parameters.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/serialization/bounds_parser.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/serialization/settings_parser.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/serialization/results_serialization.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_hydro/hydro_model_interface.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_hydro/hydro_source.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_hydro/hydro_local_resistance.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_hydro/check_valve.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_hydro/hydro_pump.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_hydro/simple_bufferless_models.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/include/graph_solvers/oil_transport/models_hydro/hydro_pipe.h
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/bin/testing_graphs.exe
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/bin/testing_hydronet.exe
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/bin/testing_oiltransport.exe
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/bin/research_oiltransport.exe
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/lib/libGraphSolversAdapter.dll.a
+-- Installing: C:/GitLab-Runner/builds/_aGWyrmH8/0/solvers/graph_solvers/Libs/Clang/lib/libGraphSolversAdapter.dll

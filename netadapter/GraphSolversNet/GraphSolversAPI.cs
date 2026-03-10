@@ -8,10 +8,19 @@ namespace GraphSolvers
     /// </summary>
     public class GraphSolversAPI
     {
+#if USE_DLL_LIBRARY
         /// <summary>
-        /// Имя файла DLL
+        /// Имя файла библиотеки адаптера для DLL (Windows)
         /// </summary>
         private const string DLLName = "GraphSolversAdapter.dll";
+#elif USE_SO_LIBRARY
+        /// <summary>
+        /// Имя файла библиотеки адаптера для SO (Linux)
+        /// </summary>
+        private const string DLLName = "libGraphSolversAdapter.so";
+#else
+        #error "Не определена константа USE_DLL_LIBRARY или USE_SO_LIBRARY. Убедитесь, что библиотека адаптера собрана и находится в netadapter/bin/tmp/"
+#endif
 
         /// <summary>
         /// Создание модели, вызов конструкторов
@@ -35,49 +44,49 @@ namespace GraphSolvers
         /// <param name="Objects">JSON строка с объектами</param>
         /// <param name="Settings">JSON строка с настройками</param>
         /// <returns>0 в случае успеха, ненулевое значение в случае ошибки</returns>
-        [DllImport(DLLName, CharSet = CharSet.Ansi, BestFitMapping = false, ThrowOnUnmappableChar = true, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(DLLName, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern int Init(
             IntPtr model,
-            [MarshalAs(UnmanagedType.LPStr)] string Topology,
-            [MarshalAs(UnmanagedType.LPStr)] string Objects,
-            [MarshalAs(UnmanagedType.LPStr)] string Settings);
+            [MarshalAs(UnmanagedType.LPUTF8Str)] string Topology,
+            [MarshalAs(UnmanagedType.LPUTF8Str)] string Objects,
+            [MarshalAs(UnmanagedType.LPUTF8Str)] string Settings);
 
         /// <summary>
         /// Начальный расчет
         /// </summary>
         /// <param name="model">Дескриптор модели</param>
         /// <param name="Bounds">JSON строка с граничными условиями</param>
-        [DllImport(DLLName, CharSet = CharSet.Ansi, BestFitMapping = false, ThrowOnUnmappableChar = true, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(DLLName, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern int Solve(
             IntPtr model,
-            [MarshalAs(UnmanagedType.LPStr)] string Bounds);
+            [MarshalAs(UnmanagedType.LPUTF8Str)] string Bounds);
 
         /// <summary>
         /// Шаг квазистационара
         /// </summary>
         /// <param name="model">Дескриптор модели</param>
         /// <param name="Bounds">JSON строка с граничными условиями</param>
-        [DllImport(DLLName, CharSet = CharSet.Ansi, BestFitMapping = false, ThrowOnUnmappableChar = true, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(DLLName, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern int QuasistaticStep(
             IntPtr model,
-            [MarshalAs(UnmanagedType.LPStr)] string Bounds);
+            [MarshalAs(UnmanagedType.LPUTF8Str)] string Bounds);
 
         /// <summary>
         /// Задать состояние
         /// </summary>
         /// <param name="model">Дескриптор модели</param>
         /// <param name="State">JSON строка с состоянием</param>
-        [DllImport(DLLName, CharSet = CharSet.Ansi, BestFitMapping = false, ThrowOnUnmappableChar = true, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(DLLName, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SetState(
             IntPtr model,
-            [MarshalAs(UnmanagedType.LPStr)] string State);
+            [MarshalAs(UnmanagedType.LPUTF8Str)] string State);
 
         /// <summary>
         /// Получить состояние
         /// </summary>
         /// <param name="model">Дескриптор модели</param>
         /// <returns>Строка с состоянием или null</returns>
-        [DllImport(DLLName, CharSet = CharSet.Ansi, BestFitMapping = false, ThrowOnUnmappableChar = true, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(DLLName, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr GetState(
             IntPtr model);
 
@@ -86,7 +95,7 @@ namespace GraphSolvers
         /// </summary>
         /// <param name="model">Дескриптор модели</param>
         /// <returns>Строка с результатом или null</returns>
-        [DllImport(DLLName, CharSet = CharSet.Ansi, BestFitMapping = false, ThrowOnUnmappableChar = true, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(DLLName, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr GetResult(
             IntPtr model);
 
@@ -106,7 +115,7 @@ namespace GraphSolvers
         {
             if (ptr == IntPtr.Zero)
                 return null;
-            return Marshal.PtrToStringAnsi(ptr);
+            return Marshal.PtrToStringUTF8(ptr);
         }
     }
 }

@@ -1,0 +1,249 @@
+[==========] Running 78 tests from 27 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from GGASolver
+[ RUN      ] GGASolver.Test1
+[       OK ] GGASolver.Test1 (0 ms)
+[----------] 1 test from GGASolver (0 ms total)
+
+[----------] 3 tests from GraphBuilder
+[ RUN      ] GraphBuilder.HandlesHydroTransport
+[       OK ] GraphBuilder.HandlesHydroTransport (0 ms)
+[ RUN      ] GraphBuilder.HandlesTransportOnly
+[       OK ] GraphBuilder.HandlesTransportOnly (0 ms)
+[ RUN      ] GraphBuilder.HandlesHydroOnly
+[       OK ] GraphBuilder.HandlesHydroOnly (0 ms)
+[----------] 3 tests from GraphBuilder (0 ms total)
+
+[----------] 10 tests from NodalSolver
+[ RUN      ] NodalSolver.Handles2Edges
+[       OK ] NodalSolver.Handles2Edges (0 ms)
+[ RUN      ] NodalSolver.HasJacobianCorrectDimensions
+[       OK ] NodalSolver.HasJacobianCorrectDimensions (0 ms)
+[ RUN      ] NodalSolver.HasJacobianCorrectSparsityPattern
+[       OK ] NodalSolver.HasJacobianCorrectSparsityPattern (0 ms)
+[ RUN      ] NodalSolver.HasNonSingularJacobian
+[       OK ] NodalSolver.HasNonSingularJacobian (0 ms)
+[ RUN      ] NodalSolver.HasContinuousJacobian
+[       OK ] NodalSolver.HasContinuousJacobian (0 ms)
+[ RUN      ] NodalSolver.HasWellConditionedFinalJacobian
+[       OK ] NodalSolver.HasWellConditionedFinalJacobian (0 ms)
+[ RUN      ] NodalSolver.HandlesJacobianAtZeroPressure
+[       OK ] NodalSolver.HandlesJacobianAtZeroPressure (0 ms)
+[ RUN      ] NodalSolver.MatchesNumericalJacobian
+[       OK ] NodalSolver.MatchesNumericalJacobian (0 ms)
+[ RUN      ] NodalSolver.EstimatesInitialPressuresAroundGivenPressure
+[       OK ] NodalSolver.EstimatesInitialPressuresAroundGivenPressure (0 ms)
+[ RUN      ] NodalSolver.ExtractsKnownPressuresForNontrivialNodesOrder
+[       OK ] NodalSolver.ExtractsKnownPressuresForNontrivialNodesOrder (0 ms)
+[ DISABLED ] NodalSolver.DISABLED_DevelopQuasistatic
+[----------] 10 tests from NodalSolver (0 ms total)
+
+[----------] 1 test from Mixer
+[ RUN      ] Mixer.IsCalculationOfMixtureBasedOnFormulas
+[       OK ] Mixer.IsCalculationOfMixtureBasedOnFormulas (0 ms)
+[----------] 1 test from Mixer (0 ms total)
+
+[----------] 3 tests from BlockSolverConfidence
+[ RUN      ] BlockSolverConfidence.HandlesTailInconfidence
+[       OK ] BlockSolverConfidence.HandlesTailInconfidence (0 ms)
+[ RUN      ] BlockSolverConfidence.HandlesDynamicConfidence
+[       OK ] BlockSolverConfidence.HandlesDynamicConfidence (0 ms)
+[ RUN      ] BlockSolverConfidence.HandlesDynamicConfidence_HotTU1
+Общая длина = 410710 m
+Проверочная = 43.9055 h
+Расчетная = 44.4167 h
+[       OK ] BlockSolverConfidence.HandlesDynamicConfidence_HotTU1 (5545 ms)
+[----------] 3 tests from BlockSolverConfidence (5546 ms total)
+
+[----------] 1 test from BlockEndogenousSolver
+[ RUN      ] BlockEndogenousSolver.HandlesOrientedMeasurementsOnBridges
+[       OK ] BlockEndogenousSolver.HandlesOrientedMeasurementsOnBridges (0 ms)
+[----------] 1 test from BlockEndogenousSolver (0 ms total)
+
+[----------] 1 test from FullPropagatableSolverConfidence
+[ RUN      ] FullPropagatableSolverConfidence.HandlesTailInconfidence
+[       OK ] FullPropagatableSolverConfidence.HandlesTailInconfidence (0 ms)
+[----------] 1 test from FullPropagatableSolverConfidence (0 ms total)
+
+[----------] 2 tests from FullPropagatableSolverEndogenous
+[ RUN      ] FullPropagatableSolverEndogenous.HandlesSchemeWithMixing
+[       OK ] FullPropagatableSolverEndogenous.HandlesSchemeWithMixing (0 ms)
+[ RUN      ] FullPropagatableSolverEndogenous.HandlesModelsWithHydroTransportBuffers
+[       OK ] FullPropagatableSolverEndogenous.HandlesModelsWithHydroTransportBuffers (0 ms)
+[----------] 2 tests from FullPropagatableSolverEndogenous (0 ms total)
+
+[----------] 1 test from FullPropagatableSolverFlow
+[ RUN      ] FullPropagatableSolverFlow.HandlesSufficientMeasurements
+[       OK ] FullPropagatableSolverFlow.HandlesSufficientMeasurements (0 ms)
+[----------] 1 test from FullPropagatableSolverFlow (0 ms total)
+
+[----------] 2 tests from NodalSolverBufferBased
+[ RUN      ] NodalSolverBufferBased.EstimatesFromBuffer
+[       OK ] NodalSolverBufferBased.EstimatesFromBuffer (0 ms)
+[ RUN      ] NodalSolverBufferBased.UpdatesModelBuffers
+[       OK ] NodalSolverBufferBased.UpdatesModelBuffers (0 ms)
+[----------] 2 tests from NodalSolverBufferBased (0 ms total)
+
+[----------] 6 tests from GraphRenumbering
+[ RUN      ] GraphRenumbering.HandlesNoRenumbering
+[       OK ] GraphRenumbering.HandlesNoRenumbering (0 ms)
+[ RUN      ] GraphRenumbering.RenumbersNodes
+[       OK ] GraphRenumbering.RenumbersNodes (0 ms)
+[ RUN      ] GraphRenumbering.RenumbersEdges1
+[       OK ] GraphRenumbering.RenumbersEdges1 (0 ms)
+[ RUN      ] GraphRenumbering.RenumbersNodesAndEdges1
+[       OK ] GraphRenumbering.RenumbersNodesAndEdges1 (0 ms)
+[ RUN      ] GraphRenumbering.MapsOldPlaces
+[       OK ] GraphRenumbering.MapsOldPlaces (0 ms)
+[ RUN      ] GraphRenumbering.RenumbersResults
+[       OK ] GraphRenumbering.RenumbersResults (0 ms)
+[----------] 6 tests from GraphRenumbering (0 ms total)
+
+[----------] 2 tests from MeasurementCompleteness
+[ RUN      ] MeasurementCompleteness.HandlesSourceSwitching
+[       OK ] MeasurementCompleteness.HandlesSourceSwitching (0 ms)
+[ RUN      ] MeasurementCompleteness.HandlesValveSwitching
+[       OK ] MeasurementCompleteness.HandlesValveSwitching (0 ms)
+[----------] 2 tests from MeasurementCompleteness (0 ms total)
+
+[----------] 1 test from TimeGridGenerator
+[ RUN      ] TimeGridGenerator.InitialStateHeuristicUsage
+[       OK ] TimeGridGenerator.InitialStateHeuristicUsage (0 ms)
+[----------] 1 test from TimeGridGenerator (0 ms total)
+
+[----------] 1 test from TaskWithMeasurementsAndControls
+[ RUN      ] TaskWithMeasurementsAndControls.ConvertsControlsAccordingToType
+[       OK ] TaskWithMeasurementsAndControls.ConvertsControlsAccordingToType (1 ms)
+[----------] 1 test from TaskWithMeasurementsAndControls (1 ms total)
+
+[----------] 1 test from BatchTransportWithControls
+[ RUN      ] BatchTransportWithControls.AppliesControlsFromCsvToObjects
+[       OK ] BatchTransportWithControls.AppliesControlsFromCsvToObjects (14 ms)
+[----------] 1 test from BatchTransportWithControls (14 ms total)
+
+[----------] 7 tests from GraphParser
+[ RUN      ] GraphParser.ParsesControlTagsForEdges2
+[       OK ] GraphParser.ParsesControlTagsForEdges2 (0 ms)
+[ RUN      ] GraphParser.ParsesFromStringSimpleScheme
+[       OK ] GraphParser.ParsesFromStringSimpleScheme (0 ms)
+[ RUN      ] GraphParser.ParsesAllPumpFieldsFromJson
+[       OK ] GraphParser.ParsesAllPumpFieldsFromJson (0 ms)
+[ RUN      ] GraphParser.ParsesAllSourceFieldsFromJson
+[       OK ] GraphParser.ParsesAllSourceFieldsFromJson (0 ms)
+[ RUN      ] GraphParser.ParsesAllValveFieldsFromJson
+[       OK ] GraphParser.ParsesAllValveFieldsFromJson (0 ms)
+[ RUN      ] GraphParser.ParsesAllLumpedFieldsFromJson
+[       OK ] GraphParser.ParsesAllLumpedFieldsFromJson (0 ms)
+[ RUN      ] GraphParser.ParsesAllCheckValveFieldsFromJson
+[       OK ] GraphParser.ParsesAllCheckValveFieldsFromJson (0 ms)
+[----------] 7 tests from GraphParser (1 ms total)
+
+[----------] 1 test from ChainSchemeGenerator
+[ RUN      ] ChainSchemeGenerator.CreatesSchemeFromPassedData
+[       OK ] ChainSchemeGenerator.CreatesSchemeFromPassedData (0 ms)
+[----------] 1 test from ChainSchemeGenerator (0 ms total)
+
+[----------] 1 test from ResultSerialization
+[ RUN      ] ResultSerialization.HandlesMultipleLayersWithRegimeSelectionStrategy
+[       OK ] ResultSerialization.HandlesMultipleLayersWithRegimeSelectionStrategy (42 ms)
+[----------] 1 test from ResultSerialization (42 ms total)
+
+[----------] 2 tests from TaskMeasuresHandling
+[ RUN      ] TaskMeasuresHandling.RoutesSidedEndognous
+[       OK ] TaskMeasuresHandling.RoutesSidedEndognous (0 ms)
+[ RUN      ] TaskMeasuresHandling.ThrowsExceptionIfNoFlowsPassed
+[       OK ] TaskMeasuresHandling.ThrowsExceptionIfNoFlowsPassed (0 ms)
+[----------] 2 tests from TaskMeasuresHandling (0 ms total)
+
+[----------] 1 test from MeasurementsAverager
+[ RUN      ] MeasurementsAverager.ComputesAveragesBetweenInputs
+[       OK ] MeasurementsAverager.ComputesAveragesBetweenInputs (0 ms)
+[----------] 1 test from MeasurementsAverager (0 ms total)
+
+[----------] 5 tests from HydroTransportTask
+[ RUN      ] HydroTransportTask.SolveWritesToBuffers
+[       OK ] HydroTransportTask.SolveWritesToBuffers (0 ms)
+[ RUN      ] HydroTransportTask.StepWithFlowPropagation
+[       OK ] HydroTransportTask.StepWithFlowPropagation (0 ms)
+[ RUN      ] HydroTransportTask.StepWithFlowPropagation_PipeUseCase
+[       OK ] HydroTransportTask.StepWithFlowPropagation_PipeUseCase (15 ms)
+[ RUN      ] HydroTransportTask.StepWithFlowCalculation
+[       OK ] HydroTransportTask.StepWithFlowCalculation (0 ms)
+[ RUN      ] HydroTransportTask.StepWithFlowCalculation_PipeUseCase
+[       OK ] HydroTransportTask.StepWithFlowCalculation_PipeUseCase (9 ms)
+[----------] 5 tests from HydroTransportTask (26 ms total)
+
+[----------] 2 tests from DecomposedQuasistaticCalc
+[ RUN      ] DecomposedQuasistaticCalc.HandlesSimpleScheme_WhenNoPipes
+[       OK ] DecomposedQuasistaticCalc.HandlesSimpleScheme_WhenNoPipes (0 ms)
+[ RUN      ] DecomposedQuasistaticCalc.HandlesSimpleSchemeWithPipe
+[       OK ] DecomposedQuasistaticCalc.HandlesSimpleSchemeWithPipe (3 ms)
+[----------] 2 tests from DecomposedQuasistaticCalc (4 ms total)
+
+[----------] 13 tests from HydroOnlyTask
+[ RUN      ] HydroOnlyTask.ReturnsNodalSolverAnalysis_WhenMultipleSubgraphs
+[       OK ] HydroOnlyTask.ReturnsNodalSolverAnalysis_WhenMultipleSubgraphs (0 ms)
+[ RUN      ] HydroOnlyTask.ReturnsEmptyAnalysisAndNonEmptyFlowResult_WhenAnalysisModeNever
+[       OK ] HydroOnlyTask.ReturnsEmptyAnalysisAndNonEmptyFlowResult_WhenAnalysisModeNever (0 ms)
+[ RUN      ] HydroOnlyTask.FillsAnalysisOnlyIfNotConverged_WhenAnalysisModeIfFailed
+[       OK ] HydroOnlyTask.FillsAnalysisOnlyIfNotConverged_WhenAnalysisModeIfFailed (1 ms)
+[ RUN      ] HydroOnlyTask.HandlesTypicalMainPumpStation_WhenDisabledReserveLine_PP
+[       OK ] HydroOnlyTask.HandlesTypicalMainPumpStation_WhenDisabledReserveLine_PP (138 ms)
+[ RUN      ] HydroOnlyTask.HandlesTypicalMainPumpStation_WhenEnabledReserveLine_PP
+[       OK ] HydroOnlyTask.HandlesTypicalMainPumpStation_WhenEnabledReserveLine_PP (120 ms)
+[ RUN      ] HydroOnlyTask.HandlesTypicalMainPumpStation_WhenDisabledReserveLine_QP
+[       OK ] HydroOnlyTask.HandlesTypicalMainPumpStation_WhenDisabledReserveLine_QP (177 ms)
+[ RUN      ] HydroOnlyTask.HandlesTypicalMainPumpStation_WhenEnabledReserveLine_QP
+[       OK ] HydroOnlyTask.HandlesTypicalMainPumpStation_WhenEnabledReserveLine_QP (224 ms)
+[ RUN      ] HydroOnlyTask.HandlesTypicalLinearPart_WhenDisabledReserveLine_PP
+[       OK ] HydroOnlyTask.HandlesTypicalLinearPart_WhenDisabledReserveLine_PP (10 ms)
+[ RUN      ] HydroOnlyTask.HandlesTypicalLinearPart_WhenEnabledReserveLine_PP
+[       OK ] HydroOnlyTask.HandlesTypicalLinearPart_WhenEnabledReserveLine_PP (14 ms)
+[ RUN      ] HydroOnlyTask.HandlesTypicalLinearPart_WhenDisabledReserveLine_QP
+[       OK ] HydroOnlyTask.HandlesTypicalLinearPart_WhenDisabledReserveLine_QP (19 ms)
+[ RUN      ] HydroOnlyTask.HandlesTypicalLinearPart_WhenEnabledReserveLine_QP
+[       OK ] HydroOnlyTask.HandlesTypicalLinearPart_WhenEnabledReserveLine_QP (24 ms)
+[ RUN      ] HydroOnlyTask.HandlesTypicalOilPumpStation
+[       OK ] HydroOnlyTask.HandlesTypicalOilPumpStation (7 ms)
+[ RUN      ] HydroOnlyTask.HandlesChainScheme_WhenVertexIndicesAreNonSequential
+[       OK ] HydroOnlyTask.HandlesChainScheme_WhenVertexIndicesAreNonSequential (0 ms)
+[----------] 13 tests from HydroOnlyTask (741 ms total)
+
+[----------] 7 tests from BoundsParser
+[ RUN      ] BoundsParser.HandlesEdgeMeasurementUnsided
+[       OK ] BoundsParser.HandlesEdgeMeasurementUnsided (0 ms)
+[ RUN      ] BoundsParser.HandlesEdgeMeasurementSided
+[       OK ] BoundsParser.HandlesEdgeMeasurementSided (0 ms)
+[ RUN      ] BoundsParser.HandlesVertexMeasurement
+[       OK ] BoundsParser.HandlesVertexMeasurement (0 ms)
+[ RUN      ] BoundsParser.HandlesControlSource
+[       OK ] BoundsParser.HandlesControlSource (0 ms)
+[ RUN      ] BoundsParser.HandlesControlValve
+[       OK ] BoundsParser.HandlesControlValve (0 ms)
+[ RUN      ] BoundsParser.HandlesSingleLayer
+[       OK ] BoundsParser.HandlesSingleLayer (0 ms)
+[ RUN      ] BoundsParser.HandlesMultipleLayers
+[       OK ] BoundsParser.HandlesMultipleLayers (0 ms)
+[----------] 7 tests from BoundsParser (0 ms total)
+
+[----------] 1 test from SettingsParserJson
+[ RUN      ] SettingsParserJson.ParsesAllSettingsFromJson
+[       OK ] SettingsParserJson.ParsesAllSettingsFromJson (0 ms)
+[----------] 1 test from SettingsParserJson (0 ms total)
+
+[----------] 1 test from IsoQsmPump
+[ RUN      ] IsoQsmPump.CreatesHeadDifference_WhilePumpIsWorking
+[       OK ] IsoQsmPump.CreatesHeadDifference_WhilePumpIsWorking (0 ms)
+[----------] 1 test from IsoQsmPump (0 ms total)
+
+[----------] 1 test from LocalResistance
+[ RUN      ] LocalResistance.DerivativeAtZeroflowIsDefined
+[       OK ] LocalResistance.DerivativeAtZeroflowIsDefined (0 ms)
+[----------] 1 test from LocalResistance (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 78 tests from 27 test suites ran. (6387 ms total)
+[  PASSED  ] 78 tests.
+
+  YOU HAVE 3 DISABLED TESTS
+

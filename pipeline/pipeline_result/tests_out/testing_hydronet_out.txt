@@ -1,0 +1,14 @@
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from BreakSplittables
+[ RUN      ] BreakSplittables.RenumbersVerticesIfNeeded_WhenNonSequentialVertexOrder
+[       OK ] BreakSplittables.RenumbersVerticesIfNeeded_WhenNonSequentialVertexOrder (0 ms)
+[ RUN      ] BreakSplittables.VerticesAreRenumbered_WhenNonSequentialVertexOrder
+[       OK ] BreakSplittables.VerticesAreRenumbered_WhenNonSequentialVertexOrder (0 ms)
+[ RUN      ] BreakSplittables.VertexIndicesAreSameInOriginalAndSplitGraph_WhenSequentialVertexOrder
+[       OK ] BreakSplittables.VertexIndicesAreSameInOriginalAndSplitGraph_WhenSequentialVertexOrder (0 ms)
+[----------] 3 tests from BreakSplittables (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.

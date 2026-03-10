@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -17,11 +17,11 @@ out
 /build-debug
 .cache
 compile_commands.json
-/netadapter/bin
 /netadapter/build
+/netadapter/tmp
 /netadapter/GraphSolversNet/bin
 /netadapter/GraphSolversNet/obj
 /netadapter/Tests/bin
 /netadapter/Tests/obj
 /testing/test_oilnet_out/*
-.DS_Store
+/netadapter/bin/tmp

@@ -1,0 +1,52 @@
+-- Building for: Ninja
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/msys64/mingw64/bin/cc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/msys64/mingw64/bin/c++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Eigen3: C:/msys64/mingw64/include/eigen3 (Required is at least version "2.91.0")
+CMake Warning (dev) at CMakeLists.txt:19 (find_package):
+  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+  --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found Boost: C:/msys64/mingw64/lib/cmake/Boost-1.87.0/BoostConfig.cmake (found version "1.87.0") found components: headers
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found GTest: C:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake (found version "1.16.0")
+-- Configuring done (3.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/build
+[1/5] Building CXX object CMakeFiles/fs_tests.dir/testing/bisection.cpp.obj
+[2/5] Building CXX object CMakeFiles/fs_tests.dir/testing/optimizer.cpp.obj
+[3/5] Building CXX object CMakeFiles/fs_tests.dir/testing/test_main.cpp.obj
+[4/5] Building CXX object CMakeFiles/fs_tests.dir/testing/newton_solver.cpp.obj
+[5/5] Linking CXX executable fs_tests.exe
+-- Install configuration: "Release"
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/lib/cmake/fixed_solvers/fixed_solversTargets.cmake
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/lib/cmake/fixed_solvers/fixed_solversConfig.cmake
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/array_ext.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/fixed.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/fixed_bisection.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/fixed_constraints.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/fixed_linear_solver.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/fixed_nonlinear_solver.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/fixed_optimizer.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/fixed_system.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/line_search/divider.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/line_search/golden_section.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/qp/qp_wrapper.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/helpers/math_helpers.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/helpers/string_helpers.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/include/fixed_solvers/fixed/helpers/ranged_functions.h
+-- Installing: C:/GitLab-Runner/builds/u8zp2MNFo/0/solvers/graph_solvers/fixed_solvers/Libs/MinGW/bin/fs_tests.exe

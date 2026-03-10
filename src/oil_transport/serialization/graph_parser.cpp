@@ -1,4 +1,4 @@
-﻿#include "oil_transport.h"
+#include "oil_transport.h"
 
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
@@ -125,9 +125,10 @@ void json_graph_parser_t::load_edges_properties(const std::string& path, const q
 {
     data.pipes = load_pipe_data(path + "/pipe_data.json");
     data.sources = load_source_data(path + "/source_data.json");
-    data.pumps = load_lumped_data(path + "/pump_data.json");
+    data.pumps = load_pump_data(path + "/pump_data.json");
     data.valves = load_valve_data(path + "/valve_data.json");
-    
+    data.check_valves = load_check_valve_data(path + "/check_valve_data.json");
+
     if (problem_type == qsm_problem_type::Transport)
         data.lumpeds = load_lumped_data(path + "/lumped_data.json");
 
@@ -142,12 +143,13 @@ void json_graph_parser_t::load_tags_controls_data(const std::string& path, const
     extract_object_tags(path + "/lumped_data.json", &data.object_tags);
     extract_object_tags(path + "/pump_data.json", &data.object_tags);
     extract_object_tags(path + "/valve_data.json", &data.object_tags);
+    extract_object_tags(path + "/check_valve_data.json", &data.object_tags);
 }
 
 std::size_t graph_json_data::get_total_object_count() const
 {
     std::size_t count = pipes.size() + sources.size() +
-        lumpeds.size() + pumps.size() + valves.size();
+        lumpeds.size() + pumps.size() + valves.size() + check_valves.size();
     return count;
 }
 
@@ -162,6 +164,7 @@ std::unordered_set<std::string> graph_json_data::get_object_names() const
     add_names(graphlib::get_map_keys(lumpeds));
     add_names(graphlib::get_map_keys(pumps));
     add_names(graphlib::get_map_keys(valves));
+    add_names(graphlib::get_map_keys(check_valves));
 
     if (names.size() != get_total_object_count()) {
         throw std::runtime_error("Same names of different objects found");
@@ -341,18 +344,23 @@ std::unordered_map<std::string, pde_solvers::pipe_json_data>
     return load_pipes_from_ptree(pt);
 }
 
-/// @brief Возвращает список полей заданной структуры T
-/// Полезно, когда нет boost::pfr::for_each_field_with_name и нужно использовать for_each_field
-template <typename T>
-constexpr auto get_field_names() {
-    constexpr size_t field_count = boost::pfr::tuple_size_v<T>;
-    std::array<std::string_view, field_count> names{};
+/// @brief Вспомогательная функция для парсинга вектора из ptree
+/// В boost::property_tree массивы JSON представляются как дочерние узлы с пустыми ключами
+template <typename ElementType>
+std::vector<ElementType> parse_vector_from_ptree(const boost::property_tree::ptree& pt) 
+{
+    std::vector<ElementType> result;
+    
+    for (const auto& [key, value] : pt) {
+        // Обрабатываем только узлы с пустыми ключами (стандартный формат JSON массива)
+        if (!key.empty())
+            throw std::runtime_error("Unexpected key in vector: " + key);
+        
+        ElementType val = value.template get_value<ElementType>();
+        result.push_back(val);
+    }
 
-    [&names] <size_t... I>(std::index_sequence<I...>) {
-        ((names[I] = boost::pfr::get_name<I, T>()), ...);
-    }(std::make_index_sequence<field_count>{});
-
-    return names;
+    return result;
 }
 
 /// @brief Внутренняя функция для парсинга данных через рефлексию из ptree
@@ -374,9 +382,37 @@ std::unordered_map<std::string, T> load_json_data_reflection_from_ptree(const bo
                 typedef decltype(field) field_type_const_ref;
                 typedef typename std::remove_reference<field_type_const_ref>::type field_type_const;
                 typedef typename std::remove_const<field_type_const>::type field_type;
-                auto child = value.template get_optional<field_type>(std::string(field_name));
-                if (child) {
-                    field = child.get();
+                
+                // Специальная обработка для векторов
+                if constexpr (std::is_same_v<field_type, std::vector<double>>) {
+                    if (auto child = value.get_child_optional(std::string(field_name))) {
+                        field = parse_vector_from_ptree<double>(*child);
+                    }
+                }
+                // Специальная обработка для nullable_bool_t
+                else if constexpr (std::is_same_v<field_type, fixed_solvers::nullable_bool_t>) {
+                    if (auto child = value.template get_optional<std::string>(std::string(field_name))) {
+                        std::string str = child.get();
+                        string_to_lower(str);
+                        if (str == "true") {
+                            field = fixed_solvers::nullable_bool_t::True;
+                        }
+                        else if (str == "false") {
+                            field = fixed_solvers::nullable_bool_t::False;
+                        }
+                        else if (str == "undefined") {
+                            field = fixed_solvers::nullable_bool_t::Undefined;
+                        }
+                        else {
+                            throw std::runtime_error("Invalid nullable_bool_t value: " + str + " (expected True, False, or Undefined)");
+                        }
+                    }
+                }
+                else {
+                    auto child = value.template get_optional<field_type>(std::string(field_name));
+                    if (child) {
+                        field = child.get();
+                    }
                 }
             });
     }
@@ -432,6 +468,24 @@ std::unordered_map<std::string, valve_json_data> json_graph_parser_t::load_valve
     return load_json_data_reflection_from_ptree<valve_json_data>(pt);
 
     //return load_valves_from_ptree(pt);
+}
+
+std::unordered_map<std::string, pump_json_data> json_graph_parser_t::load_pump_data(const std::string& filename)
+{
+    std::unordered_map<std::string, pump_json_data> objs;
+    if (!std::filesystem::exists(filename)) {
+        return objs;
+    }
+    
+    boost::property_tree::ptree pt;
+    boost::property_tree::read_json(filename, pt);
+
+    return load_json_data_reflection_from_ptree<pump_json_data>(pt);
+}
+
+std::unordered_map<std::string, check_valve_json_data> json_graph_parser_t::load_check_valve_data(const std::string& filename)
+{
+    return load_json_data_reflection<check_valve_json_data>(filename);
 }
 
 graph_json_data json_graph_parser_t::load_json_data(
@@ -498,6 +552,11 @@ void json_graph_parser_t::load_edges_properties_from_string(
     if (auto valves_node = pt.get_child_optional("valves")) {
         data.valves = load_json_data_reflection_from_ptree<valve_json_data>(*valves_node);
     }
+    
+    // Загружаем check_valves из секции "check_valves" (если есть)
+    if (auto check_valves_node = pt.get_child_optional("check_valves")) {
+        data.check_valves = load_json_data_reflection_from_ptree<check_valve_json_data>(*check_valves_node);
+    }
 
     // Для других типов объектов (sources, lumpeds, pumps) используем рефлексию
     // Они могут быть в отдельных секциях или отсутствовать
@@ -512,7 +571,7 @@ void json_graph_parser_t::load_edges_properties_from_string(
     }
 
     if (auto pumps_node = pt.get_child_optional("pumps")) {
-        data.pumps = load_json_data_reflection_from_ptree<lumped_json_data>(*pumps_node);
+        data.pumps = load_json_data_reflection_from_ptree<pump_json_data>(*pumps_node);
     }
 }
 

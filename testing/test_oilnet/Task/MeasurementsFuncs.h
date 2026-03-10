@@ -47,11 +47,11 @@ TEST(MeasurementsAverager, ComputesAveragesBetweenInputs) {
     endohydro_values_t avg = averager.get_average_hydro_values();
 
     // Assert: средние значения лежат между исходными
-    ASSERT_BETWEEN(avg.density_std.value,           800.0, 900.0);
-    ASSERT_BETWEEN(avg.viscosity_working.value,         5.0,   10.0);
-    ASSERT_BETWEEN(avg.sulfur.value,            0.5,   1.0);
-    ASSERT_BETWEEN(avg.improver.value,          1.0,   3.0);
-    ASSERT_BETWEEN(avg.temperature.value,       280.0, 320.0);
+    AssertBetween(avg.density_std.value,           800.0, 900.0);
+    AssertBetween(avg.viscosity_working.value,         5.0,   10.0);
+    AssertBetween(avg.sulfur.value,            0.5,   1.0);
+    AssertBetween(avg.improver.value,          1.0,   3.0);
+    AssertBetween(avg.temperature.value,       280.0, 320.0);
 
     // Эндогенные параметры должны быть недостоверными
     EXPECT_FALSE(avg.density_std.confidence);

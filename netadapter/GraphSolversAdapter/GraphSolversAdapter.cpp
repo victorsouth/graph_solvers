@@ -78,13 +78,17 @@ GRAPHSOLVERSADAPTER_API int Init(
     }
     
     try {
+        
+        using pipe_parameters = pde_solvers::iso_nonbaro_pipe_solver_t::pipe_parameters_type;
+        
         auto* m = reinterpret_cast<GraphSolversModel*>(model);
         
         // Парсим схему из JSON-строк Topology и Objects
         // Используем комбинированную задачу (гидравлика + транспорт)
+        // TODO: Шаблонный тип для параметров трубы можно забыть поменять.
         m->siso_data = 
             oil_transport::json_graph_parser_t::parse_hydro_transport_from_strings<
-            oil_transport::qsm_pipe_transport_parameters_t>(
+            pipe_parameters>(
             std::string(Topology),
             std::string(Objects));
 
@@ -92,7 +96,14 @@ GRAPHSOLVERSADAPTER_API int Init(
 
         std::istringstream settings_stream(Settings);
         m->settings = oil_transport::settings_parser_json::parse(settings_stream);
-        
+
+        // TODO: облагородить обработку профилей
+        make_pipes_uniform_profile_handled<pipe_parameters>(
+            m->settings.pipe_coordinate_step, &m->siso_data.hydro_props.second);
+
+        make_pipes_uniform_profile_handled<pipe_parameters>(
+            m->settings.pipe_coordinate_step, &m->siso_data.transport_props.second);
+
         m->task = std::make_unique<oil_transport::hydro_transport_task_t>(
             m->siso_data, 
             m->settings);

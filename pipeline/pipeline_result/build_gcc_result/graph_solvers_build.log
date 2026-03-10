@@ -1,0 +1,121 @@
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CXX standart: 20
+-- Found Boost: /usr/lib/cmake/Boost-1.84.0/BoostConfig.cmake (found version "1.84.0") found components: headers 
+-- Found Boost: /usr/lib/cmake/Boost-1.84.0/BoostConfig.cmake (found version "1.84.0")  
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found GTest: /usr/local/lib/cmake/GTest/GTestConfig.cmake (found version "1.16.0")  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /builds/solvers/graph_solvers/build
+[  5%] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/transport_mixer.cpp.o
+[ 10%] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/measurements/graph_timeseries.cpp.o
+[ 15%] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/transport_task.cpp.o
+[ 20%] Building CXX object CMakeFiles/graph_solvers.dir/src/hydronet/redundant_flows_corrector.cpp.o
+[ 25%] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/measurements/transport_measurements.cpp.o
+[ 30%] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/serialization/graph_parser.cpp.o
+[ 35%] Building CXX object CMakeFiles/graph_solvers.dir/src/oil_transport/measurements/transport_measurements_funcs.cpp.o
+[ 40%] Linking CXX static library libgraph_solvers.a
+[ 40%] Built target graph_solvers
+[ 45%] Building CXX object CMakeFiles/testing_hydronet.dir/testing/test_hydronet/test_hydronet.cpp.o
+[ 50%] Building CXX object CMakeFiles/testing_oiltransport.dir/testing/test_oilnet/TestGGA.cpp.o
+[ 60%] Building CXX object CMakeFiles/research_oiltransport.dir/testing/research_oilnet/research_oilnet.cpp.o
+[ 60%] Building CXX object CMakeFiles/research_oiltransport.dir/testing/research_oilnet/2025-density.cpp.o
+[ 65%] Building CXX object CMakeFiles/testing_graphs.dir/testing/test_graphs/test_graphs.cpp.o
+[ 70%] Building CXX object CMakeFiles/graph_solvers_adapter.dir/netadapter/GraphSolversAdapter/GraphSolversAdapter.cpp.o
+[ 75%] Building CXX object CMakeFiles/testing_oiltransport.dir/testing/test_oilnet/test_oilnet.cpp.o
+[ 80%] Linking CXX executable testing_graphs
+[ 80%] Built target testing_graphs
+[ 85%] Linking CXX executable testing_hydronet
+[ 85%] Built target testing_hydronet
+[ 90%] Linking CXX executable research_oiltransport
+[ 90%] Built target research_oiltransport
+[ 95%] Linking CXX shared library libGraphSolversAdapter.so
+Copy GraphSolversAdapter library to netadapter/bin/tmp
+Copy GraphSolversAdapter library to netadapter/bin
+[ 95%] Built target graph_solvers_adapter
+[100%] Linking CXX executable testing_oiltransport
+[100%] Built target testing_oiltransport
+-- Install configuration: "Release"
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/lib/libgraph_solvers.a
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/lib/cmake/graph_solvers/graph_solversTargets.cmake
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/lib/cmake/graph_solvers/graph_solversTargets-release.cmake
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/lib/cmake/graph_solvers/graph_solversConfig.cmake
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/basic_graph.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/general_structured_graph.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/graph_bicomps.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/graph_bicomps_algorithms.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/graph_bindings.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/graph_exception.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/graph_topology.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/mimo_graph.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/helpers/invertex_index.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/helpers/map_helpers.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/helpers/set_helpers.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/graphs/helpers/vector_helpers.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/helpers.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/redundant_flows_corrector.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/block_tree/endogenous_propagator.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/block_tree/flow_propagator.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/block_tree/transport_block_solver.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/flow_solvers/nodal_solver.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/flow_solvers/renumber_pressure_vertex.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/flow_solvers/nodal_solver_buffer_based.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/structured_solvers/structured_hydro_solver.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/structured_solvers/structured_transport_solver.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/full_propagatable_graph/endogenous_propagator.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/full_propagatable_graph/flow_propagator.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/full_propagatable_graph/transport_graph_solver.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/topology/topology.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/hydronet/topology/zeroflow.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/transport_buffer.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/transport_mixer.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/transport_task.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/hydro_transport_task.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/hydro_task.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/graph_builder.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/transport_batch_series.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/transport_batch_profiles.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/transport_ident.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/solvers_buffered_decorators/transport_graph_solver_buffered.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/solvers_buffered_decorators/transport_block_solver_buffered.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/measurements/graph_timeseries.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/measurements/transport_measurements.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/measurements/transport_measurements_funcs.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_transport/transport_lumped.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_transport/transport_model_interface.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_transport/transport_pipe.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_transport/transport_source.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/transport_topology/transport_topology.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/serialization/graph_parser.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/serialization/json_model_parameters.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/serialization/bounds_parser.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/serialization/settings_parser.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/serialization/results_serialization.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_hydro/hydro_model_interface.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_hydro/hydro_source.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_hydro/hydro_local_resistance.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_hydro/check_valve.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_hydro/hydro_pump.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_hydro/simple_bufferless_models.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/include/graph_solvers/oil_transport/models_hydro/hydro_pipe.h
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/bin/testing_graphs
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/bin/testing_hydronet
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/bin/testing_oiltransport
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/bin/research_oiltransport
+-- Installing: /builds/solvers/graph_solvers/Libs/GCC/lib/libGraphSolversAdapter.so

@@ -1,0 +1,97 @@
+{
+    "NPS_V1": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_V2": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_V3": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_V4": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_P1_V1": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_P1_V2": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_P2_V1": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_P2_V2": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_P3_V1": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_P3_V2": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_P4_V1": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_P4_V2": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_RD1_V1": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_RD1_V2": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_RD2_V1": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_RD2_V2": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+	"NPS_F": {
+        "initial_opening": 100,
+        "xi": 0.003,
+        "diameter": 0.2
+    },
+	"NPS_RD1": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+	"NPS_RD2": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    }
+}

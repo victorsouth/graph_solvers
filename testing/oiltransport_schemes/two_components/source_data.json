@@ -1,0 +1,18 @@
+{
+    "Src_C1": {
+        "std_volflow": 1,
+        "density": 843
+    },
+    "Snk_C1": {
+        "pressure": 1e5,
+        "density": 850
+    },
+	"Src_C2": {
+        "std_volflow": -2,
+        "density": 843
+    },
+    "Snk_C2": {
+        "pressure": 2e5,
+        "density": 850
+    }
+}

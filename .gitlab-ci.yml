@@ -3,6 +3,9 @@ stages:
   - Defining_branches
   - Build
   - Unit_Testing
+  - Dotnet_Build
+  - Dotnet_Testing
+  - Delivery
 
 #==================================================================================================
 # load branches (utils)
@@ -125,6 +128,7 @@ GCC_build:
       - fixed_solvers/pipeline/pipeline_result
       - pde_solvers/pipeline/pipeline_result
       - Libs/GCC
+      - netadapter/bin/tmp/
 
 #Сборка проекта Clang
 Clang_build:
@@ -153,6 +157,7 @@ Clang_build:
       - fixed_solvers/pipeline/pipeline_result
       - pde_solvers/pipeline/pipeline_result
       - Libs/Clang
+      - netadapter/bin/tmp/
 
 #Сборка проекта MinGW
 MinGW_build:
@@ -181,7 +186,12 @@ MinGW_build:
       - fixed_solvers/pipeline/pipeline_result
       - pde_solvers/pipeline/pipeline_result
       - Libs/MinGW
+      - netadapter/bin/tmp/
  
+#==================================================================================================
+# Unit_Testing
+#==================================================================================================
+
  # Запуск тестов с использованием GTest
 research_oiltransport:
   stage: Unit_Testing
@@ -254,3 +264,158 @@ testing_oiltransport:
       - branches.txt
       - pipeline/pipeline_result
       - Libs
+
+#==================================================================================================
+# Dotnet_Build
+#==================================================================================================
+
+# Сборка .NET компонентов (netadapter) на основе GCC_build
+netadapter_build_gcc:
+  stage: Dotnet_Build
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/dotnet/sdk:8.0
+  script:
+    - bash pipeline/pipeline_scripts/netadapter_build.sh GCC
+  needs: [GCC_build]
+  dependencies: [GCC_build]
+  allow_failure: false
+  artifacts:
+    expire_in: 24 hour
+    when: always
+    paths:
+      - pipeline/pipeline_result/netadapter_build_gcc.log
+      - netadapter/bin/tmp
+      - netadapter/Tests/bin
+      - netadapter/Tests/obj
+      - netadapter/GraphSolversNet/bin
+      - netadapter/GraphSolversNet/obj
+      - Libs
+      
+# Сборка .NET компонентов (netadapter) на основе Clang_build
+netadapter_build_clang:
+  stage: Dotnet_Build
+  tags:
+    - dev-build-clang
+  script:
+    - bash pipeline/pipeline_scripts/netadapter_build.sh Clang
+  needs: [Clang_build]
+  dependencies: [Clang_build]
+  allow_failure: false
+  artifacts:
+    expire_in: 24 hour
+    when: always
+    paths:
+      - pipeline/pipeline_result/netadapter_build_clang.log
+      - netadapter/bin/tmp
+      - netadapter/Tests/bin
+      - netadapter/Tests/obj
+      - netadapter/GraphSolversNet/bin
+      - netadapter/GraphSolversNet/obj
+      - Libs
+
+# Сборка .NET компонентов (netadapter) на основе MinGW_build
+netadapter_build_mingw:
+  stage: Dotnet_Build
+  tags:
+    - ktk-dev-build
+  script:
+    - bash pipeline/pipeline_scripts/netadapter_build.sh MinGW
+  needs: [MinGW_build]
+  dependencies: [MinGW_build]
+  allow_failure: false
+  artifacts:
+    expire_in: 24 hour
+    when: always
+    paths:
+      - pipeline/pipeline_result/netadapter_build_mingw.log
+      - netadapter/bin/tmp
+      - netadapter/Tests/bin
+      - netadapter/Tests/obj
+      - netadapter/GraphSolversNet/bin
+      - netadapter/GraphSolversNet/obj
+      - Libs
+
+#==================================================================================================
+# Dotnet_Testing
+#==================================================================================================
+
+# Запуск .NET тестов из netadapter на основе GCC сборки
+netadapter_tests_gcc:
+  stage: Dotnet_Testing
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/dotnet/sdk:8.0
+  script:
+    - bash pipeline/pipeline_scripts/netadapter_tests.sh
+  needs: [netadapter_build_gcc]
+  dependencies: [netadapter_build_gcc]
+  allow_failure: false
+  artifacts:
+    expire_in: 1 week
+    when: always
+    paths:
+      - pipeline/pipeline_result/dotnet_tests_out
+      - Libs
+
+# Запуск .NET тестов из netadapter на основе Clang сборки
+netadapter_tests_clang:
+  stage: Dotnet_Testing
+  tags:
+    - dev-build-clang
+  script:
+    - bash pipeline/pipeline_scripts/netadapter_tests.sh
+  needs: [netadapter_build_clang]
+  dependencies: [netadapter_build_clang]
+  allow_failure: false
+  artifacts:
+    expire_in: 1 week
+    when: always
+    paths:
+      - pipeline/pipeline_result/dotnet_tests_out
+      - Libs
+
+# Запуск .NET тестов из netadapter на основе MinGW сборки
+netadapter_tests_mingw:
+  stage: Dotnet_Testing
+  tags:
+    - ktk-dev-build
+  script:
+    - bash pipeline/pipeline_scripts/netadapter_tests.sh
+  needs: [netadapter_build_mingw]
+  dependencies: [netadapter_build_mingw]
+  allow_failure: false
+  artifacts:
+    expire_in: 1 week
+    when: always
+    paths:
+      - pipeline/pipeline_result/dotnet_tests_out
+      - Libs
+
+#==================================================================================================
+# Push
+#==================================================================================================
+
+Push_to_github:
+  stage: Delivery
+  tags:
+    - docker
+  image: $DOCKER_REGISTRY/$DOCKER_REPO/gcc:latest
+  variables:
+    GITHUB_MIRROR_BRANCH: $CI_DEFAULT_BRANCH
+    GITHUB_REPO: github.com/victorsouth/graph_solvers.git
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  script:
+    - git remote add github "https://${GITHUB_ACCESS_TOKEN}@${GITHUB_REPO}" 2>/dev/null || git remote set-url github "https://${GITHUB_ACCESS_TOKEN}@${GITHUB_REPO}"
+    - git fetch github "${GITHUB_MIRROR_BRANCH}" 2>/dev/null || true
+    - git checkout -B github_mirror "github/${GITHUB_MIRROR_BRANCH}" 2>/dev/null || git checkout -B github_mirror "origin/${CI_DEFAULT_BRANCH}"
+    - mkdir -p /tmp/mirror_repo
+    - git archive "origin/${CI_DEFAULT_BRANCH}" | tar -x -C /tmp/mirror_repo
+    - rm -rf /tmp/mirror_repo/testing/oiltransport_schemes/cold_tu_tags_db /tmp/mirror_repo/testing/oiltransport_schemes/hot_tu1
+    - (cd /tmp/mirror_repo && tar cf - .) | tar xf -
+    - git add -A
+    - git config user.email "ci@gitlab"
+    - git config user.name "GitLab CI"
+    - git diff --staged --quiet || (printf '%s\n' "$CI_COMMIT_MESSAGE" | git commit -F -)
+    - git push github "github_mirror:${GITHUB_MIRROR_BRANCH}"

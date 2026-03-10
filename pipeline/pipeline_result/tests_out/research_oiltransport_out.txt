@@ -1,0 +1,22 @@
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from QSMFlowsDensity
+[ RUN      ] QSMFlowsDensity.Research
+[       OK ] QSMFlowsDensity.Research (0 ms)
+[ RUN      ] QSMFlowsDensity.Flows_CondensatePipe
+[       OK ] QSMFlowsDensity.Flows_CondensatePipe (213 ms)
+[ RUN      ] QSMFlowsDensity.Density_CondensatePipe
+[       OK ] QSMFlowsDensity.Density_CondensatePipe (44263 ms)
+[ RUN      ] QSMFlowsDensity.Density_hottu
+[       OK ] QSMFlowsDensity.Density_hottu (65078 ms)
+[ RUN      ] QSMFlowsDensity.DensityHotTuProfilesJson
+[       OK ] QSMFlowsDensity.DensityHotTuProfilesJson (256995 ms)
+[ DISABLED ] QSMFlowsDensity.DISABLED_DensityHotTuHydroTransportCalc
+[----------] 5 tests from QSMFlowsDensity (366551 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (366551 ms total)
+[  PASSED  ] 5 tests.
+
+  YOU HAVE 1 DISABLED TEST
+

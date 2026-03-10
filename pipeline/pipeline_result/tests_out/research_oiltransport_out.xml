@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="0" disabled="1" errors="0" time="366.551" timestamp="2026-03-10T16:35:31.055" name="AllTests">
+  <testsuite name="QSMFlowsDensity" tests="6" failures="0" disabled="1" skipped="0" errors="0" time="366.551" timestamp="2026-03-10T16:35:31.056">
+    <testcase name="Research" file="/builds/solvers/graph_solvers/testing/research_oilnet/2025-density.cpp" line="98" status="run" result="completed" time="0." timestamp="2026-03-10T16:35:31.056" classname="QSMFlowsDensity" />
+    <testcase name="Flows_CondensatePipe" file="/builds/solvers/graph_solvers/testing/research_oilnet/2025-density.cpp" line="141" status="run" result="completed" time="0.213" timestamp="2026-03-10T16:35:31.056" classname="QSMFlowsDensity" />
+    <testcase name="Density_CondensatePipe" file="/builds/solvers/graph_solvers/testing/research_oilnet/2025-density.cpp" line="176" status="run" result="completed" time="44.263" timestamp="2026-03-10T16:35:31.269" classname="QSMFlowsDensity" />
+    <testcase name="Density_hottu" file="/builds/solvers/graph_solvers/testing/research_oilnet/2025-density.cpp" line="242" status="run" result="completed" time="65.078" timestamp="2026-03-10T16:36:15.533" classname="QSMFlowsDensity" />
+    <testcase name="DensityHotTuProfilesJson" file="/builds/solvers/graph_solvers/testing/research_oilnet/2025-density.cpp" line="278" status="run" result="completed" time="256.995" timestamp="2026-03-10T16:37:20.612" classname="QSMFlowsDensity" />
+    <testcase name="DISABLED_DensityHotTuHydroTransportCalc" file="/builds/solvers/graph_solvers/testing/research_oilnet/2025-density.cpp" line="329" status="notrun" result="suppressed" time="0." timestamp="1970-01-01T00:00:00.000" classname="QSMFlowsDensity" />
+  </testsuite>
+</testsuites>

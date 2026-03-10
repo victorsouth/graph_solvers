@@ -1,4 +1,4 @@
-﻿Подготовка Debug
+Подготовка Debug
 
 Для MSVC рекомендуется скачать предсобранный boost, файл boost_1_88_0-msvc-14.3-64.exe
 Необходимо установить boost и прописать путь до папки с файлами BoostConfig.cmake в системный PATH
@@ -25,6 +25,3 @@ cmake .. -G "Visual Studio 17 2022" -DCMAKE_PREFIX_PATH="C:/Program Files (x86)/
 
 
 Если в момент выполнения "cmake -G" отсутствует сборка GoogleTest в release-конфигурации, то graph_solvers подтянет зависимость gtestd.lib и далее при линковке будет ошибка несовместимости graph_solvers release и gtest debug
-
-
-cmake .. -G "Visual Studio 17 2022" -DCMAKE_PREFIX_PATH="C:/Devel/install/googletest/msvc"  -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDebugDLL -DCMAKE_BUILD_TYPE=Debug -DGRAPH_SOLVERS_BUILD_CHEMDAE=ON

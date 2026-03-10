@@ -1,0 +1,23 @@
+  Determining projects to restore...
+  Restored C:\GitLab-Runner\builds\_aGWyrmH8\0\solvers\graph_solvers\netadapter\GraphSolversNet\GraphSolversNet.csproj (in 778 ms).
+C:\GitLab-Runner\builds\_aGWyrmH8\0\solvers\graph_solvers\netadapter\GraphSolversNet\GraphSolvers.cs(48,17): warning CS0472: The result of the expression is always 'false' since a value of type 'nint' is never equal to 'null' of type 'nint?' [C:\GitLab-Runner\builds\_aGWyrmH8\0\solvers\graph_solvers\netadapter\GraphSolversNet\GraphSolversNet.csproj]
+  GraphSolversNet -> C:\GitLab-Runner\builds\_aGWyrmH8\0\solvers\graph_solvers\netadapter\GraphSolversNet\bin\Release\net8.0\GraphSolversNet.dll
+
+Build succeeded.
+
+C:\GitLab-Runner\builds\_aGWyrmH8\0\solvers\graph_solvers\netadapter\GraphSolversNet\GraphSolvers.cs(48,17): warning CS0472: The result of the expression is always 'false' since a value of type 'nint' is never equal to 'null' of type 'nint?' [C:\GitLab-Runner\builds\_aGWyrmH8\0\solvers\graph_solvers\netadapter\GraphSolversNet\GraphSolversNet.csproj]
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:10.03
+  Determining projects to restore...
+  Restored C:\GitLab-Runner\builds\_aGWyrmH8\0\solvers\graph_solvers\netadapter\Tests\Tests.csproj (in 484 ms).
+  1 of 2 projects are up-to-date for restore.
+  GraphSolversNet -> C:\GitLab-Runner\builds\_aGWyrmH8\0\solvers\graph_solvers\netadapter\GraphSolversNet\bin\Release\net8.0\GraphSolversNet.dll
+  Tests -> C:\GitLab-Runner\builds\_aGWyrmH8\0\solvers\graph_solvers\netadapter\Tests\bin\Release\net8.0\Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.10

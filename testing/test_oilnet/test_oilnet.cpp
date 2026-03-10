@@ -24,6 +24,8 @@
 #include "Task/HydroTask.h"
 #include "Serialization/TestBoundParserJson.h"
 #include "Serialization/TestSettingsParser.h"
+#include "ModelsHydro/Pump.h"
+#include "ModelsHydro/LocalResistance.h"
 
 
 #include <filesystem>

@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Runtime.InteropServices;
@@ -125,7 +125,7 @@ namespace GraphSolvers
 
             try
             {
-                string? jsonString = Marshal.PtrToStringAnsi(statePtr);
+                string? jsonString = GraphSolversAPI.GetStringFromPtr(statePtr);
 
                 if (string.IsNullOrWhiteSpace(jsonString))
                 {
@@ -204,7 +204,7 @@ namespace GraphSolvers
 
             try
             {
-                string? jsonString = Marshal.PtrToStringAnsi(resultPtr);
+                string? jsonString = GraphSolversAPI.GetStringFromPtr(resultPtr);
 
                 if (string.IsNullOrWhiteSpace(jsonString))
                 {

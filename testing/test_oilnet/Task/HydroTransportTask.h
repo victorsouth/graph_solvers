@@ -114,7 +114,7 @@ TEST(HydroTransportTask, StepWithFlowPropagation_PipeUseCase) {
     // Проверяем наличие нескольких партий в трубе
     const auto& layer = *result.pipes.front().second->layer;
     for (const auto& d : layer.density_std.value) {
-        ASSERT_BETWEEN(d, dummy_density, density_measure);
+        AssertBetween(d, dummy_density, density_measure);
     }
 }
 
@@ -190,7 +190,7 @@ TEST(HydroTransportTask, StepWithFlowCalculation_PipeUseCase) {
     // Проверяем наличие нескольких партий в трубе
     const auto& layer = *result.pipes.front().second->layer;
     for (const auto& d : layer.density_std.value) {
-        ASSERT_BETWEEN(d, dummy_density, density_measure);
+        AssertBetween(d, dummy_density, density_measure);
     }
 }
 

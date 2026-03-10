@@ -1,0 +1,17 @@
+{
+    "NPS_V1": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+    "NPS_P1_V1": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    },
+	"NPS_F": {
+        "initial_opening": 100,
+        "xi": 0.03,
+        "diameter": 0.2
+    }
+}

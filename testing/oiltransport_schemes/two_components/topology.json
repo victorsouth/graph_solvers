@@ -1,0 +1,50 @@
+{
+    "Src_C1": {
+        "to": 0
+    },
+    "Snk_C1": {
+        "from": 5
+    },
+    "Valve1_C1": {
+        "from": 0,
+        "to": 1
+    },
+    "Valve2_C1": {
+        "from": 1,
+        "to": 2
+    },
+    "Valve3_C1": {
+        "from": 2,
+        "to": 3
+    },
+    "Valve4_C1": {
+        "from": 3,
+        "to": 4
+    },
+    "Valve5_C1": {
+        "from": 4,
+        "to": 5
+    },
+	"Src_C2": {
+        "to": 10
+    },
+    "Snk_C2": {
+        "from": 14
+    },
+    "Valve1_C2": {
+        "from": 10,
+        "to": 11
+    },
+    "Valve2_C2": {
+        "from": 11,
+        "to": 12
+    },
+    "Valve3_C2": {
+        "from": 12,
+        "to": 13
+    },
+    "Valve4_C2": {
+        "from": 13,
+        "to": 14
+    }
+}

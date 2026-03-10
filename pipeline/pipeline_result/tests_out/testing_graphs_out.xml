@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="10" failures="0" disabled="4" errors="0" time="0." timestamp="2026-03-10T16:41:46.132" name="AllTests">
+  <testsuite name="BlockTreeTopologicalSort" tests="3" failures="0" disabled="1" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:41:46.132">
+    <testcase name="DISABLED_BlockTopologicalSort" file="/builds/solvers/graph_solvers/testing/test_graphs/BlockTreeTopologicalSort.h" line="6" status="notrun" result="suppressed" time="0." timestamp="1970-01-01T00:00:00.000" classname="BlockTreeTopologicalSort" />
+    <testcase name="ThrowsExceptionIfNotAllGraphElementsSorted" file="/builds/solvers/graph_solvers/testing/test_graphs/BlockTreeTopologicalSort.h" line="27" status="run" result="completed" time="0." timestamp="2026-03-10T16:41:46.132" classname="BlockTreeTopologicalSort" />
+    <testcase name="IsConsistentWithExpertKnoledge_TwoBlocksScheme" file="/builds/solvers/graph_solvers/testing/test_graphs/BlockTreeTopologicalSort.h" line="48" status="run" result="completed" time="0." timestamp="2026-03-10T16:41:46.132" classname="BlockTreeTopologicalSort" />
+  </testsuite>
+  <testsuite name="Core" tests="2" failures="0" disabled="2" skipped="0" errors="0" time="0." timestamp="1970-01-01T00:00:00.000">
+    <testcase name="DISABLED_Cbs" file="/builds/solvers/graph_solvers/testing/test_graphs/BiconnectedComponentsTests.h" line="6" status="notrun" result="suppressed" time="0." timestamp="1970-01-01T00:00:00.000" classname="Core" />
+    <testcase name="DISABLED_Cycles" file="/builds/solvers/graph_solvers/testing/test_graphs/BiconnectedComponentsTests.h" line="25" status="notrun" result="suppressed" time="0." timestamp="1970-01-01T00:00:00.000" classname="Core" />
+  </testsuite>
+  <testsuite name="Utils" tests="1" failures="0" disabled="1" skipped="0" errors="0" time="0." timestamp="1970-01-01T00:00:00.000">
+    <testcase name="DISABLED_GetCycles" file="/builds/solvers/graph_solvers/testing/test_graphs/BiconnectedComponentsTests.h" line="44" status="notrun" result="suppressed" time="0." timestamp="1970-01-01T00:00:00.000" classname="Utils" />
+  </testsuite>
+  <testsuite name="IncidenceMatrix" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-03-10T16:41:46.132">
+    <testcase name="ReducesMatrix1" file="/builds/solvers/graph_solvers/testing/test_graphs/MatrixIncidences.h" line="7" status="run" result="completed" time="0." timestamp="2026-03-10T16:41:46.132" classname="IncidenceMatrix" />
+    <testcase name="SplitMatrix1" file="/builds/solvers/graph_solvers/testing/test_graphs/MatrixIncidences.h" line="22" status="run" result="completed" time="0." timestamp="2026-03-10T16:41:46.132" classname="IncidenceMatrix" />
+    <testcase name="ReducesMatrix2" file="/builds/solvers/graph_solvers/testing/test_graphs/MatrixIncidences.h" line="46" status="run" result="completed" time="0." timestamp="2026-03-10T16:41:46.132" classname="IncidenceMatrix" />
+    <testcase name="SplitMatrix2" file="/builds/solvers/graph_solvers/testing/test_graphs/MatrixIncidences.h" line="63" status="run" result="completed" time="0." timestamp="2026-03-10T16:41:46.132" classname="IncidenceMatrix" />
+  </testsuite>
+</testsuites>
